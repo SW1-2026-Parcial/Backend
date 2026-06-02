@@ -1,0 +1,16 @@
+fastapi==0.111.0
+uvicorn[standard]==0.30.1
+beanie==1.29.0
+motor==3.7.1
+python-jose[cryptography]==3.3.0
+bcrypt==5.0.0
+pydantic-settings==2.3.0
+python-dotenv==1.0.1
+httpx==0.27.0
+websockets==12.0
+
+# Ciclo 2 — Gestión Documental
+azure-storage-blob==12.19.0
+python-multipart==0.0.9
+python-docx==1.1.0
+openpyxl==3.1.5

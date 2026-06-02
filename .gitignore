@@ -1,0 +1,65 @@
+# ── Entorno virtual ───────────────────────────────────────────────────────────
+venv/
+.venv/
+env/
+.env/
+
+# ── Variables de entorno (credenciales) ───────────────────────────────────────
+.env
+.env.local
+.env.production
+# .env.example SÍ se sube — es la plantilla sin valores reales
+
+# ── Python cache ──────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# ── Modelos TensorFlow / ML (ciclo 2) — archivos grandes ──────────────────────
+tf_models/
+*.h5
+*.keras
+*.pkl
+*.joblib
+saved_model/
+
+# ── Cobertura y testing ───────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+*.cover
+
+# ── Distribución / build ──────────────────────────────────────────────────────
+dist/
+build/
+*.egg-info/
+*.egg
+MANIFEST
+
+# ── Type checking ─────────────────────────────────────────────────────────────
+.mypy_cache/
+.dmypy.json
+.pyright/
+
+# ── IDEs ──────────────────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ── macOS ─────────────────────────────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverrideDirectory
+
+# ── Logs ──────────────────────────────────────────────────────────────────────
+*.log
+logs/
+
+# ── Archivos temporales ───────────────────────────────────────────────────────
+*.tmp
+*.temp
+tmp/
+temp/
