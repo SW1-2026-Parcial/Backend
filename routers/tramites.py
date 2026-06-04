@@ -58,17 +58,25 @@ async def list_tramites(
 
 @router.post("", response_model=TramiteResponse, status_code=status.HTTP_201_CREATED)
 async def create_tramite(body: CreateTramiteRequest, current: User = Depends(get_current_user)):
-    # Validar que la versión existe y está publicada
-    version = await VersionPolitica.get(PydanticObjectId(body.versionPoliticaId))
-    if not version or version.politicaId != body.politicaId:
-        raise NotFoundException("VersionPolitica", body.versionPoliticaId)
-    if version.estado != EstadoPolitica.PUBLISHED:
-        raise BusinessException("Solo se pueden iniciar trámites sobre versiones publicadas")
+    if body.versionPoliticaId:
+        version = await VersionPolitica.get(PydanticObjectId(body.versionPoliticaId))
+        if not version or version.politicaId != body.politicaId:
+            raise NotFoundException("VersionPolitica", body.versionPoliticaId)
+        if version.estado != EstadoPolitica.PUBLISHED:
+            raise BusinessException("Solo se pueden iniciar trámites sobre versiones publicadas")
+    else:
+        versions = await VersionPolitica.find(
+            VersionPolitica.politicaId == body.politicaId,
+            VersionPolitica.estado == EstadoPolitica.PUBLISHED,
+        ).sort("-numeroVersion").limit(1).to_list()
+        if not versions:
+            raise BusinessException("No hay versión publicada para esta política")
+        version = versions[0]
 
     ticket = await generate_ticket()
     tramite = Tramite(
         politicaId=body.politicaId,
-        versionPoliticaId=body.versionPoliticaId,
+        versionPoliticaId=str(version.id),
         status=EstadoTramite.ACTIVE,
         prioridad=body.prioridad,
         initiatedBy=str(current.id),
@@ -114,6 +122,7 @@ async def get_history(tramite_id: str, _: User = Depends(get_current_user)):
             tramiteId=e.tramiteId,
             tipo=e.tipo.value,
             nodeId=e.nodeId,
+            taskId=e.taskId,
             actorId=e.actorId,
             formData=e.formData,
             branchTaken=e.branchTaken,

@@ -12,12 +12,14 @@ from beanie import PydanticObjectId
 from core.security import get_current_user, require_admin
 from core.exceptions import NotFoundException, PoliticaInmutableException
 from models.user import User
-from models.version_politica import VersionPolitica
+from models.politica import EstadoPolitica
+from models.version_politica import VersionPolitica, Calle
 from models.nodo import Nodo, Destinos
 from schemas.nodo import (
     CreateNodoRequest, UpdateNodoRequest, ConfigurarNodoRequest,
-    CreateConexionRequest, NodoResponse,
+    CreateConexionRequest, NodoResponse, CalleRequest, UpdateCalleRequest,
 )
+from schemas.politica import VersionResponse
 from core.websocket_manager import ws_manager
 
 router = APIRouter(prefix="/api/versions/{vid}", tags=["nodos"])
@@ -181,3 +183,72 @@ async def delete_conexion(vid: str, origen: str, destino: str):
         "origen": origen,
         "destino": destino,
     })
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Calles (lanes)
+# ──────────────────────────────────────────────────────────────────────────────
+
+def _version_response(v: VersionPolitica) -> VersionResponse:
+    return VersionResponse(
+        id=str(v.id),
+        politicaId=v.politicaId,
+        numeroVersion=v.numeroVersion,
+        estado=v.estado.value,
+        calles=v.calles,
+        validado=v.validado,
+        publicadoEn=v.publicadoEn,
+        creadoEn=v.creadoEn,
+    )
+
+
+@router.post("/lanes", response_model=VersionResponse,
+             dependencies=[Depends(require_admin)])
+async def add_calle(vid: str, body: CalleRequest):
+    v = await _get_version_or_404(vid)
+    if v.estado != EstadoPolitica.DRAFT:
+        raise PoliticaInmutableException()
+    calle_id = body.calleId or str(uuid.uuid4())
+    calle = Calle(
+        calleId=calle_id,
+        nombre=body.nombre,
+        departamentoId=body.departamentoId,
+        posicionCanvas=body.posicionCanvas,
+        dimensiones=body.dimensiones,
+        orden=body.orden,
+    )
+    v.calles.append(calle)
+    await v.save()
+    return _version_response(v)
+
+
+@router.get("/lanes", response_model=List[Calle])
+async def list_calles(vid: str, _: User = Depends(get_current_user)):
+    v = await _get_version_or_404(vid)
+    return v.calles
+
+
+@router.patch("/lanes/{calle_id}", response_model=VersionResponse,
+              dependencies=[Depends(require_admin)])
+async def update_calle(vid: str, calle_id: str, body: UpdateCalleRequest):
+    v = await _get_version_or_404(vid)
+    if v.estado != EstadoPolitica.DRAFT:
+        raise PoliticaInmutableException()
+    calle = next((c for c in v.calles if c.calleId == calle_id), None)
+    if not calle:
+        raise NotFoundException("Calle", calle_id)
+    updates = body.model_dump(exclude_none=True)
+    for k, val in updates.items():
+        setattr(calle, k, val)
+    await v.save()
+    return _version_response(v)
+
+
+@router.delete("/lanes/{calle_id}", status_code=status.HTTP_204_NO_CONTENT,
+               dependencies=[Depends(require_admin)])
+async def delete_calle(vid: str, calle_id: str):
+    v = await _get_version_or_404(vid)
+    if v.estado != EstadoPolitica.DRAFT:
+        raise PoliticaInmutableException()
+    v.calles = [c for c in v.calles if c.calleId != calle_id]
+    await v.save()

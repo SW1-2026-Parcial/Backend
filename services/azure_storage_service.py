@@ -48,9 +48,18 @@ def _mime_type(filename: str, content_type: Optional[str]) -> str:
     return guessed or "application/octet-stream"
 
 
-async def upload_file(file: UploadFile) -> tuple[str, int, str, str]:
+async def upload_file(
+    file: UploadFile,
+    politica_id: str | None = None,
+    tramite_id:  str | None = None,
+) -> tuple[str, int, str, str]:
     """
     Sube un archivo a Azure Blob Storage.
+
+    Jerarquía de ruta:
+      - Con política y trámite:  {politicaId}/{tramiteId}/{uuid}.{ext}
+      - Solo con política:       {politicaId}/{uuid}.{ext}
+      - Sin contexto:            general/{uuid}.{ext}
 
     Retorna: (blob_name, tamano_bytes, mime_type, extension)
     """
@@ -60,7 +69,15 @@ async def upload_file(file: UploadFile) -> tuple[str, int, str, str]:
     if ext not in EXTENSIONES_PERMITIDAS:
         raise ValueError(f"Extensión .{ext} no permitida. Permitidas: {', '.join(sorted(EXTENSIONES_PERMITIDAS))}")
 
-    blob_name = f"documentos/{uuid.uuid4()}.{ext}"
+    # Construir ruta jerárquica en el blob
+    if politica_id and tramite_id:
+        prefix = f"{politica_id}/{tramite_id}"
+    elif politica_id:
+        prefix = politica_id
+    else:
+        prefix = "general"
+
+    blob_name = f"{prefix}/{uuid.uuid4()}.{ext}"
     mime = _mime_type(file.filename or "", file.content_type)
 
     contents = await file.read()

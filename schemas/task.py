@@ -15,7 +15,13 @@ class TaskResponse(BaseModel):
     formData: Optional[dict] = None
     branchSelected: Optional[bool] = None
     createdAt: Optional[datetime] = None
+    updatedAt: Optional[datetime] = None
     completedAt: Optional[datetime] = None
+    tramiteTicket: Optional[str] = None
+    politicaNombre: Optional[str] = None
+    nodoNombre: Optional[str] = None
+    departamentoNombre: Optional[str] = None
+    prioridad: Optional[str] = None
 
     model_config = {"from_attributes": True}
 
@@ -26,7 +32,7 @@ class CompletarTareaRequest(BaseModel):
 
 
 class RechazarTareaRequest(BaseModel):
-    comentario: Optional[str] = None
+    motivo: Optional[str] = None
 
 
 class DelegarTareaRequest(BaseModel):

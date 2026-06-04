@@ -23,6 +23,7 @@ class DocumentoResponse(BaseModel):
     tamano: int
     mimeType: str
     politicaId: Optional[str] = None
+    versionPoliticaId: Optional[str] = None
     tramiteId: Optional[str] = None
     clienteId: Optional[str] = None
     subidoPorId: str
@@ -53,6 +54,9 @@ class EditUrlResponse(BaseModel):
     documentKey: str        # ID único del documento (para cache de OnlyOffice)
     documentType: str       # text | spreadsheet | presentation
     nombre: str
+    token: Optional[str] = None           # JWT firmado para OnlyOffice
+    onlyofficeUrl: Optional[str] = None   # URL del Document Server
+    config: Optional[dict] = None         # Config completa para el JS SDK
 
 
 # ── Eventos ───────────────────────────────────────────────────────────────────

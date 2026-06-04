@@ -15,7 +15,7 @@ from core.http_client import http_client
 # Routers REST
 from routers import auth, users, departamentos, politicas, versiones, nodos, tramites, tasks, metricas
 # Ciclo 2
-from routers import documentos
+from routers import documentos, reportes, mira, sync, agent
 
 # Routers WebSocket
 from routers import ws_canvas, ws_tramites, ws_tareas
@@ -75,6 +75,10 @@ app.include_router(tasks.router)
 app.include_router(metricas.router)
 # Ciclo 2
 app.include_router(documentos.router)
+app.include_router(reportes.router)
+app.include_router(mira.router)
+app.include_router(sync.router)
+app.include_router(agent.router)
 
 # ── Routers WebSocket ─────────────────────────────────────────────────────────
 app.include_router(ws_canvas.router)

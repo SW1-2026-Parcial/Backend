@@ -46,6 +46,7 @@ def _to_response(doc: Documento) -> DocumentoResponse:
         tamano=doc.tamano,
         mimeType=doc.mimeType,
         politicaId=doc.politicaId,
+        versionPoliticaId=doc.versionPoliticaId,
         tramiteId=doc.tramiteId,
         clienteId=doc.clienteId,
         subidoPorId=doc.subidoPorId,
@@ -93,16 +94,24 @@ async def _registrar_evento(
 async def upload_documento(
     file: UploadFile = File(...),
     politicaId: Optional[str] = Form(None),
+    versionPoliticaId: Optional[str] = Form(None),
     tramiteId: Optional[str] = Form(None),
     clienteId: Optional[str] = Form(None),
     current_user: User = Depends(get_current_user),
 ):
-    """Sube un archivo a Azure Blob Storage y guarda sus metadatos en MongoDB."""
+    """
+    Sube un archivo a Azure Blob Storage y guarda sus metadatos en MongoDB.
+    Jerarquía del blob: {politicaId}/{tramiteId}/{uuid}.{ext}
+    """
     if not file.filename:
         raise BusinessException("El archivo no tiene nombre")
 
     try:
-        blob_name, tamano, mime_type, extension = await storage.upload_file(file)
+        blob_name, tamano, mime_type, extension = await storage.upload_file(
+            file,
+            politica_id=politicaId,
+            tramite_id=tramiteId,
+        )
     except ValueError as e:
         raise BusinessException(str(e))
 
@@ -113,6 +122,7 @@ async def upload_documento(
         tamano=tamano,
         mimeType=mime_type,
         politicaId=politicaId,
+        versionPoliticaId=versionPoliticaId,
         tramiteId=tramiteId,
         clienteId=clienteId,
         subidoPorId=str(current_user.id),
@@ -124,6 +134,101 @@ async def upload_documento(
     await _registrar_evento(str(doc.id), TipoEventoDocumento.UPLOADED, str(current_user.id))
     logger.info("Documento subido: %s por %s", file.filename, current_user.email)
     return _to_response(doc)
+
+
+@router.get("/tree")
+async def get_tree(current_user: User = Depends(get_current_user)):
+    """
+    Devuelve la estructura jerárquica:
+      política → trámite (ticketNumber) → documentos
+    para poblar el TreeView del repositorio.
+    """
+    from beanie import PydanticObjectId
+    from models.politica import Politica
+    from models.tramite import Tramite
+    from collections import defaultdict
+
+    docs = await Documento.find({"activo": True}).to_list()
+
+    # Filtrar por permisos si no es admin/supervisor
+    if current_user.rol == Rol.FUNCIONARIO:
+        docs = [d for d in docs if _tiene_permiso(d, current_user, NivelPermiso.READ)]
+
+    # Agrupar: politicaId → tramiteId → [docs]
+    arbol: dict = defaultdict(lambda: defaultdict(list))
+    sin_tramite: dict = defaultdict(list)  # politicaId → [docs sin tramiteId]
+
+    for d in docs:
+        if d.tramiteId:
+            arbol[d.politicaId or "sin_politica"][d.tramiteId].append(d)
+        else:
+            sin_tramite[d.politicaId or "sin_politica"].append(d)
+
+    # Cargar nombres de políticas y trámites (cache en memoria)
+    politicas_cache: dict = {}
+    tramites_cache: dict  = {}
+
+    async def _nombre_politica(pid: str) -> str:
+        if pid not in politicas_cache:
+            try:
+                p = await Politica.get(PydanticObjectId(pid))
+                politicas_cache[pid] = p.nombre if p else pid
+            except Exception:
+                politicas_cache[pid] = pid
+        return politicas_cache[pid]
+
+    async def _ticket_tramite(tid: str) -> str:
+        if tid not in tramites_cache:
+            try:
+                t = await Tramite.get(PydanticObjectId(tid))
+                tramites_cache[tid] = t.ticketNumber or tid if t else tid
+            except Exception:
+                tramites_cache[tid] = tid
+        return tramites_cache[tid]
+
+    result = []
+    all_pol_ids = set(list(arbol.keys()) + list(sin_tramite.keys()))
+
+    for pol_id in all_pol_ids:
+        pol_nombre = await _nombre_politica(pol_id) if pol_id != "sin_politica" else "Sin política"
+        children = []
+
+        for tram_id, tram_docs in arbol[pol_id].items():
+            ticket = await _ticket_tramite(tram_id)
+            children.append({
+                "key":      f"{pol_id}_{tram_id}",
+                "label":    ticket,
+                "type":     "tramite",
+                "tramiteId": tram_id,
+                "children": [
+                    {
+                        "key":   str(d.id),
+                        "label": d.nombre,
+                        "type":  "documento",
+                        "data":  _to_response(d).model_dump(),
+                    }
+                    for d in sorted(tram_docs, key=lambda x: x.creadoEn, reverse=True)
+                ],
+            })
+
+        # Documentos sin trámite asociado (nivel directo bajo política)
+        for d in sin_tramite[pol_id]:
+            children.append({
+                "key":   str(d.id),
+                "label": d.nombre,
+                "type":  "documento",
+                "data":  _to_response(d).model_dump(),
+            })
+
+        result.append({
+            "key":       pol_id,
+            "label":     pol_nombre,
+            "type":      "politica",
+            "politicaId": pol_id,
+            "children":  children,
+        })
+
+    return result
 
 
 @router.get("", response_model=List[DocumentoResponse])
@@ -224,7 +329,12 @@ async def get_edit_url(
     """
     Genera la config necesaria para abrir el documento en OnlyOffice.
     El frontend usa este objeto para inicializar el editor.
+    Incluye un JWT firmado que OnlyOffice verifica.
     """
+    import jwt as pyjwt
+    from config import get_settings
+    settings = get_settings()
+
     doc = await Documento.get(PydanticObjectId(doc_id))
     if not doc or not doc.activo:
         raise NotFoundException("Documento", doc_id)
@@ -233,18 +343,45 @@ async def get_edit_url(
 
     doc_type = _ONLYOFFICE_TYPE.get(doc.extension, "text")
     read_url = storage.generate_sas_url(doc.blobName, expires_hours=2)
+    callback_url = f"http://host.docker.internal:8080/api/documentos/{doc_id}/onlyoffice-callback"
+    doc_key = f"{doc_id}-{int(doc.actualizadoEn.timestamp() if doc.actualizadoEn else doc.creadoEn.timestamp())}"
 
-    # La callback URL es donde OnlyOffice llama al guardar
-    from config import get_settings
-    settings = get_settings()
-    callback_url = f"http://localhost:8080/api/documentos/{doc_id}/onlyoffice-callback"
+    # Config de OnlyOffice
+    oo_config = {
+        "document": {
+            "fileType": doc.extension,
+            "key": doc_key,
+            "title": doc.nombre,
+            "url": read_url,
+        },
+        "documentType": doc_type,
+        "editorConfig": {
+            "callbackUrl": callback_url,
+            "lang": "es",
+            "user": {
+                "id": str(current_user.id),
+                "name": current_user.nombre or current_user.email,
+            },
+            "mode": "edit",
+            "customization": {
+                "autosave": True,
+                "forcesave": True,
+            },
+        },
+    }
+
+    # Firmar con JWT para que OnlyOffice lo acepte
+    token = pyjwt.encode(oo_config, settings.onlyoffice_secret, algorithm="HS256")
 
     return EditUrlResponse(
         documentUrl=read_url,
         callbackUrl=callback_url,
-        documentKey=f"{doc_id}-{int(doc.creadoEn.timestamp())}",
+        documentKey=doc_key,
         documentType=doc_type,
         nombre=doc.nombre,
+        token=token,
+        onlyofficeUrl=settings.onlyoffice_url,
+        config=oo_config,
     )
 
 

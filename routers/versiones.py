@@ -13,10 +13,10 @@ from core.security import get_current_user, require_admin, require_admin_or_supe
 from core.exceptions import NotFoundException, BusinessException, PoliticaInmutableException
 from models.user import User, Rol
 from models.politica import Politica, EstadoPolitica
-from models.version_politica import VersionPolitica, Calle
+from models.version_politica import VersionPolitica
 from models.nodo import Nodo, TipoNodo
 from schemas.politica import VersionResponse, DiagramaResponse
-from schemas.nodo import CalleRequest, UpdateCalleRequest, ValidacionResultado, ValidacionErrorDto, InstruccionRequest
+from schemas.nodo import ValidacionResultado, ValidacionErrorDto, InstruccionRequest
 import services.ai_service as ai_svc
 import services.workflow.workflow_engine as wf_module
 
@@ -174,59 +174,3 @@ async def ai_generate(pol_id: str, vid: str, body: InstruccionRequest):
         raise PoliticaInmutableException()
     result = await ai_svc.generate_diagram(body.instruccion, vid)
     return result
-
-
-# ──────────────────────────────────────────────────────────────────────────────
-# Calles
-# ──────────────────────────────────────────────────────────────────────────────
-
-@router.post("/{vid}/lanes", response_model=VersionResponse,
-             dependencies=[Depends(require_admin)])
-async def add_calle(pol_id: str, vid: str, body: CalleRequest):
-    v = await _get_version_or_404(pol_id, vid)
-    if v.estado != EstadoPolitica.DRAFT:
-        raise PoliticaInmutableException()
-    calle_id = body.calleId or str(uuid.uuid4())
-    calle = Calle(
-        calleId=calle_id,
-        nombre=body.nombre,
-        departamentoId=body.departamentoId,
-        posicionCanvas=body.posicionCanvas,
-        dimensiones=body.dimensiones,
-        orden=body.orden,
-    )
-    v.calles.append(calle)
-    await v.save()
-    return _version_response(v)
-
-
-@router.get("/{vid}/lanes", response_model=List[Calle])
-async def list_calles(pol_id: str, vid: str, _: User = Depends(get_current_user)):
-    v = await _get_version_or_404(pol_id, vid)
-    return v.calles
-
-
-@router.patch("/{vid}/lanes/{calle_id}", response_model=VersionResponse,
-              dependencies=[Depends(require_admin)])
-async def update_calle(pol_id: str, vid: str, calle_id: str, body: UpdateCalleRequest):
-    v = await _get_version_or_404(pol_id, vid)
-    if v.estado != EstadoPolitica.DRAFT:
-        raise PoliticaInmutableException()
-    calle = next((c for c in v.calles if c.calleId == calle_id), None)
-    if not calle:
-        raise NotFoundException("Calle", calle_id)
-    updates = body.model_dump(exclude_none=True)
-    for k, val in updates.items():
-        setattr(calle, k, val)
-    await v.save()
-    return _version_response(v)
-
-
-@router.delete("/{vid}/lanes/{calle_id}", status_code=status.HTTP_204_NO_CONTENT,
-               dependencies=[Depends(require_admin)])
-async def delete_calle(pol_id: str, vid: str, calle_id: str):
-    v = await _get_version_or_404(pol_id, vid)
-    if v.estado != EstadoPolitica.DRAFT:
-        raise PoliticaInmutableException()
-    v.calles = [c for c in v.calles if c.calleId != calle_id]
-    await v.save()

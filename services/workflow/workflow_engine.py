@@ -128,7 +128,7 @@ class WorkflowEngine:
         # Cargar nodos siguientes
         next_nodes = await Nodo.find(
             Nodo.versionPoliticaId == ctx.nodo.versionPoliticaId,
-            Nodo.nodoId.in_(next_ids),
+            {"nodoId": {"$in": next_ids}},
         ).to_list()
 
         if len(next_nodes) == 1:

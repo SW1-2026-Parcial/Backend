@@ -14,7 +14,7 @@ async def get_bottlenecks() -> list[dict]:
     Devuelve lista ordenada de mayor a menor tiempo promedio.
     """
     events = await TramiteEvent.find(
-        TramiteEvent.tipo.in_([TramiteEventType.NODE_ENTERED, TramiteEventType.TASK_COMPLETED])
+        {"tipo": {"$in": [TramiteEventType.NODE_ENTERED.value, TramiteEventType.TASK_COMPLETED.value]}}
     ).sort("+timestamp").to_list()
 
     # Agrupar por tramiteId → nodeId → tiempos

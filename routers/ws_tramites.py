@@ -24,8 +24,7 @@ async def tramite_ws(websocket: WebSocket, tramite_id: str):
     logger.debug("[tramite_ws] cliente conectado a %s", topic)
 
     # Enviar estado actual al conectar
-    tramite = await Tramite.find_one({"_id": tramite_id}) or \
-              await _find_tramite_by_id(tramite_id)
+    tramite = await _find_tramite_by_id(tramite_id)
     if tramite:
         await websocket.send_text(json.dumps({
             "type": "TRAMITE_STATUS",

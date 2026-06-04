@@ -18,6 +18,14 @@ class Settings(BaseSettings):
     azure_storage_account_key: str = ""
     azure_storage_container: str = "documentos"
 
+    # OpenRouter LLM — Ciclo 2 (Agente + Reportes)
+    openrouter_api_key: str = ""
+    openrouter_model: str = "google/gemini-2.0-flash-001"
+
+    # OnlyOffice Document Server
+    onlyoffice_url: str = "http://localhost:8088"
+    onlyoffice_secret: str = "sp1-onlyoffice-jwt-secret-2026"
+
     @property
     def cors_origins_list(self) -> list[str]:
         return [o.strip() for o in self.cors_origins.split(",")]

@@ -23,6 +23,7 @@ class TramiteEvent(Document):
     nodeId: Optional[str] = None
     calleId: Optional[str] = None
     departamentoId: Optional[str] = None
+    taskId: Optional[str] = None      # ID de la Task asociada (para TASK_COMPLETED/REJECTED)
     actorId: Optional[str] = None
     formData: Optional[dict] = None
     branchTaken: Optional[bool] = None
