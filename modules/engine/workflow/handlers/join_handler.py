@@ -12,10 +12,10 @@ _JOIN_COLLECTION = "tramite_join_tokens"
 
 
 async def _get_join_col():
-    from beanie.odm.utils.init import init_settings
-    from motor.motor_asyncio import AsyncIOMotorDatabase
-    from beanie import get_db
-    return get_db()[_JOIN_COLLECTION]
+    # get_db() no existe en Beanie 1.x — acceder via motor collection de cualquier modelo
+    from models.tramite import Tramite
+    db = Tramite.get_motor_collection().database
+    return db[_JOIN_COLLECTION]
 
 
 class JoinNodeHandler(NodeHandler):

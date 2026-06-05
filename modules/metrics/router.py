@@ -1,4 +1,5 @@
-from fastapi import APIRouter, Depends
+from typing import Optional
+from fastapi import APIRouter, Depends, Query
 from core.security import require_admin_or_supervisor
 from modules.metrics.service import get_bottlenecks, get_performance
 
@@ -6,12 +7,14 @@ router = APIRouter(prefix="/api/metrics", tags=["metricas"])
 
 
 @router.get("/bottlenecks", dependencies=[Depends(require_admin_or_supervisor)])
-async def bottlenecks():
-    """Nodos con mayor tiempo promedio de ejecución (cuellos de botella)."""
-    return await get_bottlenecks()
+async def bottlenecks(versionId: Optional[str] = Query(None)):
+    """Nodos con mayor tiempo promedio de ejecución (cuellos de botella).
+    Acepta ?versionId= para filtrar por versión de política."""
+    return await get_bottlenecks(version_id=versionId)
 
 
 @router.get("/performance", dependencies=[Depends(require_admin_or_supervisor)])
-async def performance():
-    """Métricas globales: total trámites, tasa de completación, tiempo promedio."""
-    return await get_performance()
+async def performance(versionId: Optional[str] = Query(None)):
+    """Métricas globales: total trámites, tasa de completación, tiempo promedio.
+    Acepta ?versionId= para filtrar por versión de política."""
+    return await get_performance(version_id=versionId)
