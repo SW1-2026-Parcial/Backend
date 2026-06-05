@@ -12,13 +12,30 @@ from config import get_settings
 from database import init_db
 from core.http_client import http_client
 
-# Routers REST
-from routers import auth, users, departamentos, politicas, versiones, nodos, tramites, tasks, metricas
-# Ciclo 2
-from routers import documentos, reportes, mira, sync, agent
+# Módulo auth
+from modules.auth import auth_router, users_router, departamentos_router
 
-# Routers WebSocket
-from routers import ws_canvas, ws_tramites, ws_tareas
+# Módulo policies
+from modules.policies import politicas_router, versiones_router, nodos_router
+from modules.policies import ws_router as policies_ws
+
+# Módulo engine
+from modules.engine import tramites_router, tasks_router
+from modules.engine import ws_tramites_router, ws_tareas_router
+
+# Módulo documents
+from modules.documents import router as documents_router
+
+# Módulo metrics
+from modules.metrics import router as metrics_router
+
+# Módulo intelligence
+from modules.intelligence.analytics import router as analytics_mod
+from modules.intelligence.chat import agent_router as agent_mod
+from modules.intelligence.chat import reports_router as reports_mod
+
+# sync (utilitario transversal, se queda en routers/)
+from routers import sync
 
 # Registrar listeners del EventBus (importar el paquete basta)
 import listeners  # noqa: F401
@@ -63,27 +80,36 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# ── Routers REST ──────────────────────────────────────────────────────────────
-app.include_router(auth.router)
-app.include_router(users.router)
-app.include_router(departamentos.router)
-app.include_router(politicas.router)
-app.include_router(versiones.router)
-app.include_router(nodos.router)
-app.include_router(tramites.router)
-app.include_router(tasks.router)
-app.include_router(metricas.router)
-# Ciclo 2
-app.include_router(documentos.router)
-app.include_router(reportes.router)
-app.include_router(mira.router)
-app.include_router(sync.router)
-app.include_router(agent.router)
+# ── Auth ──────────────────────────────────────────────────────────────────────
+app.include_router(auth_router.router)
+app.include_router(users_router.router)
+app.include_router(departamentos_router.router)
 
-# ── Routers WebSocket ─────────────────────────────────────────────────────────
-app.include_router(ws_canvas.router)
-app.include_router(ws_tramites.router)
-app.include_router(ws_tareas.router)
+# ── Policies ──────────────────────────────────────────────────────────────────
+app.include_router(politicas_router.router)
+app.include_router(versiones_router.router)
+app.include_router(nodos_router.router)
+app.include_router(policies_ws.router)
+
+# ── Engine ────────────────────────────────────────────────────────────────────
+app.include_router(tramites_router.router)
+app.include_router(tasks_router.router)
+app.include_router(ws_tramites_router.router)
+app.include_router(ws_tareas_router.router)
+
+# ── Documents ─────────────────────────────────────────────────────────────────
+app.include_router(documents_router.router)
+
+# ── Metrics ───────────────────────────────────────────────────────────────────
+app.include_router(metrics_router.router)
+
+# ── Intelligence ──────────────────────────────────────────────────────────────
+app.include_router(analytics_mod.router)
+app.include_router(reports_mod.router)
+app.include_router(agent_mod.router)
+
+# ── Sync (utilitario transversal) ─────────────────────────────────────────────
+app.include_router(sync.router)
 
 
 # ── Health check ──────────────────────────────────────────────────────────────

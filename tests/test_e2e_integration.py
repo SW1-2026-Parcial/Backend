@@ -251,7 +251,7 @@ class TestSync:
     def test_pull(self, client, auth_headers):
         """Pull de datos recientes."""
         res = client.post("/sync/pull", headers=auth_headers, json={
-            "lastSyncTimestamp": "2026-01-01T00:00:00Z"
+            "ultimaSync": "2026-01-01T00:00:00Z"
         })
         # Endpoint puede existir o no — verificar que no sea 500
         assert res.status_code in [200, 404, 405]
@@ -259,7 +259,7 @@ class TestSync:
     def test_push_empty(self, client, auth_headers):
         """Push vacío (sin acciones pendientes)."""
         res = client.post("/sync/push", headers=auth_headers, json={
-            "actions": []
+            "acciones": []
         })
         assert res.status_code in [200, 404, 405]
 

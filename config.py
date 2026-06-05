@@ -25,6 +25,10 @@ class Settings(BaseSettings):
     # OnlyOffice Document Server
     onlyoffice_url: str = "http://localhost:8088"
     onlyoffice_secret: str = "sp1-onlyoffice-jwt-secret-2026"
+    # URL que OnlyOffice usa para llamar al callback del backend
+    # - Nativo:  http://host.docker.internal:8080  (Mac/Windows con Docker Desktop)
+    # - Docker:  http://backend:8080               (dentro de docker-compose)
+    backend_url: str = "http://host.docker.internal:8080"
 
     @property
     def cors_origins_list(self) -> list[str]:

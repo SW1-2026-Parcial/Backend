@@ -17,7 +17,7 @@ from models.task import Task, EstadoTask
 from models.nodo import Nodo
 from models.politica import Politica, EstadoPolitica
 from models.departamento import Departamento
-from services.workflow.workflow_engine import workflow_engine
+from modules.engine.workflow.workflow_engine import workflow_engine
 
 router = APIRouter(prefix="/api/sync", tags=["sync"])
 
