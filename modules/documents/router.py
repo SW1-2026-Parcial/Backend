@@ -389,7 +389,7 @@ async def get_edit_url(
         documentType=doc_type,
         nombre=doc.nombre,
         token=token,
-        onlyofficeUrl=settings.onlyoffice_url,
+        onlyofficeUrl=settings.onlyoffice_public_url,
         config=oo_config,
     )
 

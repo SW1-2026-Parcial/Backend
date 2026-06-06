@@ -383,10 +383,10 @@ REGLAS:
 - Si no se especifica formato, usá EXCEL por defecto.
 - Cuando tengas suficiente información, confirmá todo y marcá listo.
 
-FORMATO DE RESPUESTA — SIEMPRE JSON:
-{{
+FORMATO DE RESPUESTA — SIEMPRE JSON (usa llaves simples, NO dobles):
+{
   "mensaje": "texto de respuesta al usuario",
-  "criterios": {{
+  "criterios": {
     "titulo": "...",
     "formato": "EXCEL",
     "estado": null,
@@ -396,17 +396,17 @@ FORMATO DE RESPUESTA — SIEMPRE JSON:
     "fechaHasta": null,
     "columnas": [],
     "ordenarPor": "startedAt"
-  }},
+  },
   "listo": false,
   "camposFaltantes": ["estado", "fechas"]
-}}
+}
 
 Cuando tengas todo y el usuario confirme: pon "listo": true y "camposFaltantes": [].
 """
 
 
 class ReporteChatRequest(BaseModel):
-    mensaje: str
+    mensaje: str = ""          # vacío permitido — /chat/clear no necesita mensaje
     sessionId: Optional[str] = None
 
 

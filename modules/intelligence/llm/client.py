@@ -30,6 +30,8 @@ def _get_client() -> AsyncOpenAI:
 def _extract_json(raw: str) -> str:
     """Extrae JSON de bloques de codigo markdown si el LLM lo envuelve."""
     raw = raw.strip()
+    # Corregir dobles llaves que algunos LLMs copian del prompt
+    raw = raw.replace("{{", "{").replace("}}", "}")
     match = re.search(r"```(?:json)?\s*(\{.*?\})\s*```", raw, re.DOTALL | re.IGNORECASE)
     if match:
         return match.group(1).strip()
@@ -65,6 +67,7 @@ async def chat_completion(
             messages=messages,
             temperature=temperature,
             max_tokens=max_tokens,
+            response_format={"type": "json_object"},
             extra_headers={
                 "HTTP-Referer": "http://localhost:8080",
                 "X-OpenRouter-Title": "SP1-BPM-Backend",

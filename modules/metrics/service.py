@@ -12,10 +12,27 @@ from models.nodo import Nodo
 async def get_bottlenecks(version_id: str | None = None) -> list[dict]:
     """
     Calcula tiempo promedio por nodo sumando intervalos entre NODE_ENTERED y TASK_COMPLETED.
+    Filtra por versión si se provee version_id: solo considera trámites de esa versión.
     Devuelve lista ordenada de mayor a menor tiempo promedio con etiqueta del nodo y ranking.
     """
-    query = {"tipo": {"$in": [TramiteEventType.NODE_ENTERED.value, TramiteEventType.TASK_COMPLETED.value]}}
-    events = await TramiteEvent.find(query).sort("+timestamp").to_list()
+    # Si hay version_id, primero obtener los tramiteIds de esa versión
+    tramite_ids: list[str] | None = None
+    if version_id:
+        tramites_version = await Tramite.find(
+            Tramite.versionPoliticaId == version_id
+        ).to_list()
+        tramite_ids = [str(t.id) for t in tramites_version]
+        if not tramite_ids:
+            return []  # sin trámites para esta versión → sin bottlenecks
+
+    from beanie.operators import In
+    event_filter = [
+        In(TramiteEvent.tipo, [TramiteEventType.NODE_ENTERED, TramiteEventType.TASK_COMPLETED])
+    ]
+    if tramite_ids is not None:
+        event_filter.append(In(TramiteEvent.tramiteId, tramite_ids))
+
+    events = await TramiteEvent.find(*event_filter).sort("+timestamp").to_list()
 
     # Agrupar por tramiteId → nodeId → tiempos
     entered: dict[tuple, datetime] = {}
@@ -57,15 +74,31 @@ async def get_bottlenecks(version_id: str | None = None) -> list[dict]:
     return result
 
 
-async def get_performance(version_id: str | None = None) -> dict:
+async def get_performance(
+    version_id: str | None = None,
+    desde: str | None = None,
+    hasta: str | None = None,
+) -> dict:
     """
     Métricas generales: total trámites, completados, activos, tasa de completación.
-    Acepta version_id opcional para filtrar por versión de política.
+    Acepta version_id, desde y hasta (ISO date strings) para filtrar.
     """
     # Construir filtros Beanie tipados (no raw dict) para que los enums se resuelvan bien
     version_filter = []
     if version_id:
         version_filter = [Tramite.versionPoliticaId == version_id]
+    if desde:
+        try:
+            dt_desde = datetime.fromisoformat(desde).replace(tzinfo=timezone.utc)
+            version_filter.append(Tramite.startedAt >= dt_desde)
+        except ValueError:
+            pass
+    if hasta:
+        try:
+            dt_hasta = datetime.fromisoformat(hasta).replace(tzinfo=timezone.utc)
+            version_filter.append(Tramite.startedAt <= dt_hasta)
+        except ValueError:
+            pass
 
     total     = await Tramite.find(*version_filter).count()
     completed = await Tramite.find(*version_filter, Tramite.status == EstadoTramite.COMPLETED).count()

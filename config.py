@@ -20,10 +20,11 @@ class Settings(BaseSettings):
 
     # OpenRouter LLM — Ciclo 2 (Agente + Reportes)
     openrouter_api_key: str = ""
-    openrouter_model: str = "google/gemini-2.0-flash-001"
+    openrouter_model: str = "google/gemini-2.5-flash"
 
     # OnlyOffice Document Server
     onlyoffice_url: str = "http://localhost:8088"
+    onlyoffice_public_url: str = "http://localhost:8088"
     onlyoffice_secret: str = "sp1-onlyoffice-jwt-secret-2026"
     # URL que OnlyOffice usa para llamar al callback del backend
     # - Nativo:  http://host.docker.internal:8080  (Mac/Windows con Docker Desktop)

@@ -14,7 +14,11 @@ async def bottlenecks(versionId: Optional[str] = Query(None)):
 
 
 @router.get("/performance", dependencies=[Depends(require_admin_or_supervisor)])
-async def performance(versionId: Optional[str] = Query(None)):
+async def performance(
+    versionId: Optional[str] = Query(None),
+    desde:     Optional[str] = Query(None, description="ISO date YYYY-MM-DD"),
+    hasta:     Optional[str] = Query(None, description="ISO date YYYY-MM-DD"),
+):
     """Métricas globales: total trámites, tasa de completación, tiempo promedio.
-    Acepta ?versionId= para filtrar por versión de política."""
-    return await get_performance(version_id=versionId)
+    Acepta ?versionId=, ?desde= y ?hasta= para filtrar."""
+    return await get_performance(version_id=versionId, desde=desde, hasta=hasta)
