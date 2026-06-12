@@ -686,9 +686,13 @@ async def get_edit_url(
 async def onlyoffice_callback(doc_id: str, body: dict):
     """
     Endpoint que OnlyOffice llama cuando el usuario guarda el documento.
-    status 2 = documento listo para guardar, downloadUrl tiene el archivo nuevo.
+    status 2 = guardado final (todos salieron)
+    status 6 = forcesave (guardado intermedio, sesión sigue activa)
     """
-    if body.get("status") != 2:
+    status_oo = body.get("status")
+
+    # Solo procesar guardados reales (2=final, 6=forcesave)
+    if status_oo not in (2, 6):
         return {"error": 0}
 
     download_url = body.get("url")
@@ -722,11 +726,15 @@ async def onlyoffice_callback(doc_id: str, body: dict):
     await asyncio.to_thread(_actualizar_s3)
 
     doc.tamano = len(contenido)
-    doc.actualizadoEn = datetime.now(timezone.utc)
+    # Solo actualizar actualizadoEn en el guardado FINAL (status=2)
+    # Si se actualiza en forcesave (status=6), el doc_key cambia y bota
+    # a los otros usuarios de la sesión colaborativa activa
+    if status_oo == 2:
+        doc.actualizadoEn = datetime.now(timezone.utc)
     await doc.save()
 
     await _registrar_evento(str(doc.id), TipoEventoDocumento.EDITED, "onlyoffice")
-    logger.info("Documento actualizado por OnlyOffice: %s", doc.nombre)
+    logger.info("Documento actualizado por OnlyOffice (status=%s): %s", status_oo, doc.nombre)
     return {"error": 0}
 
 
