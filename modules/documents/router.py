@@ -823,6 +823,99 @@ async def get_historial(
     ]
 
 
+# ── Guardado manual como versión nombrada ─────────────────────────────────────
+
+@router.post("/{doc_id}/guardar-version", response_model=DocumentoResponse, status_code=status.HTTP_201_CREATED)
+async def guardar_version(
+    doc_id: str,
+    body: dict,
+    current_user: User = Depends(get_current_user),
+):
+    """
+    Crea una versión nombrada del documento a partir del contenido actual en S3.
+    Flujo: OnlyOffice ya guardó el estado actual → este endpoint lo snapshottea como versión.
+    """
+    import asyncio, uuid as uuid_lib
+    nombre_version = (body.get("nombre") or "").strip()
+    if not nombre_version:
+        nombre_version = datetime.now(timezone.utc).strftime("Versión %d/%m/%Y %H:%M")
+
+    doc_actual = await Documento.get(PydanticObjectId(doc_id))
+    if not doc_actual or not doc_actual.activo:
+        raise NotFoundException("Documento", doc_id)
+    if not _tiene_permiso(doc_actual, current_user, NivelPermiso.WRITE):
+        raise HTTPException(status_code=403, detail="Sin permiso para versionar este documento")
+
+    # Descargar contenido actual desde S3
+    import httpx
+    read_url = storage.generate_sas_url(doc_actual.blobName, expires_hours=1)
+    async with httpx.AsyncClient() as client:
+        r = await client.get(read_url)
+        r.raise_for_status()
+        contenido = r.content
+
+    # Subir copia como nuevo blob
+    prefijo = doc_actual.blobName.rsplit("/", 1)[0]
+    nuevo_blob = f"{prefijo}/v{doc_actual.version + 1}_{uuid_lib.uuid4()}.{doc_actual.extension}"
+
+    def _upload():
+        from modules.documents.storage_service import _get_cliente
+        from config import get_settings
+        s = get_settings()
+        _get_cliente().put_object(
+            Bucket=s.aws_bucket,
+            Key=nuevo_blob,
+            Body=contenido,
+            ContentType=doc_actual.mimeType,
+        )
+
+    await asyncio.to_thread(_upload)
+
+    ahora = datetime.now(timezone.utc)
+
+    # La versión actual pasa a ser histórica
+    doc_actual.esVersionActual = False
+    doc_actual.actualizadoEn = ahora
+    await doc_actual.save()
+
+    # Nueva versión nombrada
+    nueva = Documento(
+        nombre=nombre_version,
+        extension=doc_actual.extension,
+        blobName=nuevo_blob,
+        tamano=len(contenido),
+        mimeType=doc_actual.mimeType,
+        politicaId=doc_actual.politicaId,
+        versionPoliticaId=doc_actual.versionPoliticaId,
+        tramiteId=doc_actual.tramiteId,
+        clienteId=doc_actual.clienteId,
+        subidoPorId=str(current_user.id),
+        modificadoPorId=str(current_user.id),
+        permisos=doc_actual.permisos,
+        activo=True,
+        version=doc_actual.version + 1,
+        versionAnteriorId=str(doc_actual.id),
+        esVersionActual=True,
+        creadoEn=ahora,
+        actualizadoEn=ahora,
+    )
+    await nueva.insert()
+
+    await _registrar_evento(
+        str(nueva.id),
+        TipoEventoDocumento.UPLOADED,
+        str(current_user.id),
+        detalles={
+            "version": nueva.version,
+            "nombre": nombre_version,
+            "versionAnteriorId": str(doc_actual.id),
+            "accion": "guardado_manual",
+        },
+    )
+    logger.info("Versión '%s' (v%d) creada para documento %s", nombre_version, nueva.version, doc_id)
+    return _to_response(nueva)
+
+
 # ── Control de versiones ──────────────────────────────────────────────────────
 
 @router.post("/{doc_id}/nueva-version", response_model=DocumentoResponse, status_code=status.HTTP_201_CREATED)
