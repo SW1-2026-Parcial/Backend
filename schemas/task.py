@@ -11,6 +11,7 @@ class TaskResponse(BaseModel):
     calleId: Optional[str] = None
     departamentoId: Optional[str] = None
     assignedTo: Optional[str] = None
+    assignedToNombre: Optional[str] = None
     status: str
     formData: Optional[dict] = None
     branchSelected: Optional[bool] = None

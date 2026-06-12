@@ -20,7 +20,7 @@ class PermisoDocumento(BaseModel):
 class Documento(Document):
     nombre: str                               # nombre original del archivo
     extension: str                            # pdf, docx, xlsx, png, jpg, etc.
-    blobName: str                             # ruta en Azure Blob: {polId}/{tramId}/{uuid}.{ext}
+    blobName: str                             # ruta en S3: {polId}/{tramId}/{uuid}.{ext}
     tamano: int                               # tamaño en bytes
     mimeType: str
     # ── Jerarquía: política → trámite ───────────────────────────────────────────
@@ -33,6 +33,10 @@ class Documento(Document):
     modificadoPorId: Optional[str] = None     # userId de última modificación
     permisos: List[PermisoDocumento] = []     # permisos explícitos por usuario
     activo: bool = True                       # soft delete
+    # ── Control de versiones ─────────────────────────────────────────────────────
+    version: int = 1                          # número de versión (1, 2, 3...)
+    versionAnteriorId: Optional[str] = None   # id del documento versión anterior
+    esVersionActual: bool = True              # False en versiones históricas
     creadoEn: datetime
     actualizadoEn: Optional[datetime] = None
 

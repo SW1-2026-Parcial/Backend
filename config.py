@@ -12,11 +12,11 @@ class Settings(BaseSettings):
     ai_service_url: str = "http://localhost:8000"
     cors_origins: str = "http://localhost:4200,http://localhost:3000,http://localhost:5173,http://localhost:8100"
 
-    # Azure Blob Storage — Ciclo 2
-    azure_storage_connection_string: str = ""
-    azure_storage_account_name: str = ""
-    azure_storage_account_key: str = ""
-    azure_storage_container: str = "documentos"
+    # Amazon S3 — Ciclo 2
+    aws_access_key_id: str = ""
+    aws_secret_access_key: str = ""
+    aws_region: str = "us-east-1"
+    aws_bucket: str = "sp1-documentos"
 
     # OpenRouter LLM — Ciclo 2 (Agente + Reportes)
     openrouter_api_key: str = ""

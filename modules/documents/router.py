@@ -1,6 +1,6 @@
 """
 Gestión Documental — Ciclo 2.
-Almacena archivos en Azure Blob Storage, metadatos en MongoDB.
+Almacena archivos en Amazon S3, metadatos en MongoDB.
 """
 import logging
 from datetime import datetime, timezone
@@ -52,14 +52,20 @@ def _to_response(doc: Documento) -> DocumentoResponse:
         subidoPorId=doc.subidoPorId,
         modificadoPorId=doc.modificadoPorId,
         permisos=[PermisoDocumentoSchema(userId=p.userId, nivel=p.nivel) for p in doc.permisos],
+        version=doc.version,
+        versionAnteriorId=doc.versionAnteriorId,
+        esVersionActual=doc.esVersionActual,
         creadoEn=doc.creadoEn,
         actualizadoEn=doc.actualizadoEn,
     )
 
 
 def _tiene_permiso(doc: Documento, user: User, nivel: NivelPermiso) -> bool:
-    """Verifica si el usuario tiene al menos el nivel de permiso requerido."""
+    """Verifica si el usuario tiene al menos el nivel de permiso requerido.
+    Acceso implícito: administradores y supervisores del departamento del trámite."""
     if user.rol == Rol.ADMINISTRADOR:
+        return True
+    if user.rol == Rol.SUPERVISOR:
         return True
     if doc.subidoPorId == str(user.id):
         return True
@@ -70,6 +76,37 @@ def _tiene_permiso(doc: Documento, user: User, nivel: NivelPermiso) -> bool:
             if orden.index(p.nivel) >= idx_requerido:
                 return True
     return False
+
+
+async def _asignar_permisos_automaticos(tramite_id: str) -> list[PermisoDocumento]:
+    """Asigna permisos automáticos: funcionario que tomó la tarea + supervisores del depto."""
+    from models.task import Task
+    permisos: list[PermisoDocumento] = []
+    seen_users: set[str] = set()
+
+    # Buscar tasks del trámite para obtener assignedTo y departamentoId
+    tasks = await Task.find({"tramiteId": tramite_id}).to_list()
+
+    for task in tasks:
+        # Funcionario asignado → WRITE
+        if task.assignedTo and task.assignedTo not in seen_users:
+            permisos.append(PermisoDocumento(userId=task.assignedTo, nivel=NivelPermiso.WRITE))
+            seen_users.add(task.assignedTo)
+
+        # Supervisores del departamento de la tarea → WRITE
+        if task.departamentoId:
+            supervisores = await User.find(
+                User.rol == Rol.SUPERVISOR,
+                User.departamentoId == task.departamentoId,
+                User.activo == True,
+            ).to_list()
+            for sup in supervisores:
+                uid = str(sup.id)
+                if uid not in seen_users:
+                    permisos.append(PermisoDocumento(userId=uid, nivel=NivelPermiso.WRITE))
+                    seen_users.add(uid)
+
+    return permisos
 
 
 async def _registrar_evento(
@@ -106,6 +143,17 @@ async def upload_documento(
     if not file.filename:
         raise BusinessException("El archivo no tiene nombre")
 
+    # Si hay tramiteId pero no politicaId, resolver desde el trámite
+    if tramiteId and not politicaId:
+        from models.tramite import Tramite
+        try:
+            tramite = await Tramite.get(PydanticObjectId(tramiteId))
+            if tramite:
+                politicaId = tramite.politicaId
+                versionPoliticaId = versionPoliticaId or tramite.versionPoliticaId
+        except Exception:
+            pass
+
     try:
         blob_name, tamano, mime_type, extension = await storage.upload_file(
             file,
@@ -114,6 +162,11 @@ async def upload_documento(
         )
     except ValueError as e:
         raise BusinessException(str(e))
+
+    # Auto-asignar permisos si hay trámite asociado
+    permisos_auto = []
+    if tramiteId:
+        permisos_auto = await _asignar_permisos_automaticos(tramiteId)
 
     doc = Documento(
         nombre=file.filename,
@@ -126,7 +179,7 @@ async def upload_documento(
         tramiteId=tramiteId,
         clienteId=clienteId,
         subidoPorId=str(current_user.id),
-        permisos=[],
+        permisos=permisos_auto,
         creadoEn=datetime.now(timezone.utc),
     )
     await doc.insert()
@@ -231,6 +284,102 @@ async def get_tree(current_user: User = Depends(get_current_user)):
     return result
 
 
+# ── Lazy tree endpoints ───────────────────────────────────────────────────────
+
+@router.get("/tree/politicas")
+async def tree_politicas(current_user: User = Depends(get_current_user)):
+    """Devuelve solo el nivel de políticas con conteo de documentos (sin cargar hijos)."""
+    from models.politica import Politica
+    from collections import Counter
+
+    docs = await Documento.find({"activo": True}).to_list()
+
+    if current_user.rol == Rol.FUNCIONARIO:
+        docs = [d for d in docs if _tiene_permiso(d, current_user, NivelPermiso.READ)]
+
+    counts: Counter = Counter(d.politicaId or "sin_politica" for d in docs)
+    pol_ids = [pid for pid in counts if pid != "sin_politica"]
+
+    politicas_objs = await Politica.find(
+        {"_id": {"$in": [PydanticObjectId(pid) for pid in pol_ids]}}
+    ).to_list() if pol_ids else []
+    nombre_map = {str(p.id): p.nombre for p in politicas_objs}
+
+    result = []
+    for pol_id, total in sorted(counts.items(), key=lambda x: nombre_map.get(x[0], x[0])):
+        label = nombre_map.get(pol_id, "Sin política") if pol_id != "sin_politica" else "Sin política"
+        result.append({
+            "key": pol_id,
+            "label": label,
+            "type": "politica",
+            "politicaId": pol_id,
+            "leaf": False,
+            "data": {"count": total},
+        })
+    return result
+
+
+@router.get("/tree/tramites/{politica_id}")
+async def tree_tramites(
+    politica_id: str,
+    current_user: User = Depends(get_current_user),
+):
+    """Devuelve trámites de una política con conteo de documentos."""
+    from models.tramite import Tramite
+    from collections import Counter
+
+    query = {"politicaId": politica_id, "activo": True} if politica_id != "sin_politica" else {"politicaId": None, "activo": True}
+    docs = await Documento.find(query).to_list()
+
+    if current_user.rol == Rol.FUNCIONARIO:
+        docs = [d for d in docs if _tiene_permiso(d, current_user, NivelPermiso.READ)]
+
+    counts: Counter = Counter(d.tramiteId or "sin_tramite" for d in docs)
+    tram_ids = [tid for tid in counts if tid != "sin_tramite"]
+
+    tramites_objs = await Tramite.find(
+        {"_id": {"$in": [PydanticObjectId(tid) for tid in tram_ids]}}
+    ).to_list() if tram_ids else []
+    ticket_map = {str(t.id): t.ticketNumber or str(t.id) for t in tramites_objs}
+
+    result = []
+    for tram_id, total in sorted(counts.items(), key=lambda x: ticket_map.get(x[0], x[0]), reverse=True):
+        label = ticket_map.get(tram_id, tram_id) if tram_id != "sin_tramite" else "Sin trámite"
+        result.append({
+            "key": f"{politica_id}_{tram_id}",
+            "label": label,
+            "type": "tramite",
+            "tramiteId": tram_id,
+            "leaf": False,
+            "data": {"count": total},
+        })
+    return result
+
+
+@router.get("/tree/documentos/{tramite_id}")
+async def tree_documentos(
+    tramite_id: str,
+    current_user: User = Depends(get_current_user),
+):
+    """Devuelve documentos de un trámite, ordenados por fecha desc."""
+    query = {"tramiteId": tramite_id, "activo": True} if tramite_id != "sin_tramite" else {"tramiteId": None, "activo": True}
+    docs = await Documento.find(query).sort("-creadoEn").to_list()
+
+    if current_user.rol == Rol.FUNCIONARIO:
+        docs = [d for d in docs if _tiene_permiso(d, current_user, NivelPermiso.READ)]
+
+    return [
+        {
+            "key": str(d.id),
+            "label": d.nombre,
+            "type": "documento",
+            "leaf": True,
+            "data": _to_response(d).model_dump(),
+        }
+        for d in docs
+    ]
+
+
 @router.get("/public/tramite/{tramite_id}", response_model=List[DocumentoResponse])
 async def public_docs_by_tramite(tramite_id: str):
     """Endpoint público — el mobile consulta documentos de un trámite sin JWT."""
@@ -240,14 +389,72 @@ async def public_docs_by_tramite(tramite_id: str):
     return [_to_response(d) for d in docs]
 
 
+@router.post("/public/upload", response_model=DocumentoResponse, status_code=status.HTTP_201_CREATED)
+async def public_upload_documento(
+    file: UploadFile = File(...),
+    tramiteId: str = Form(...),
+    clienteId: Optional[str] = Form(None),
+):
+    """
+    Sube un documento desde la app móvil sin JWT.
+    Solo permite asociar documentos a trámites existentes (tramiteId obligatorio).
+    """
+    if not file.filename:
+        raise BusinessException("El archivo no tiene nombre")
+
+    # Verificar que el trámite existe
+    from models.tramite import Tramite
+    from beanie import PydanticObjectId
+    try:
+        tramite = await Tramite.get(PydanticObjectId(tramiteId))
+    except Exception:
+        tramite = None
+    if tramite is None:
+        raise NotFoundException("Tramite", tramiteId)
+
+    try:
+        blob_name, tamano, mime_type, extension = await storage.upload_file(
+            file,
+            politica_id=tramite.politicaId,
+            tramite_id=tramiteId,
+        )
+    except ValueError as e:
+        raise BusinessException(str(e))
+
+    # Auto-asignar permisos
+    permisos_auto = await _asignar_permisos_automaticos(tramiteId)
+
+    doc = Documento(
+        nombre=file.filename,
+        extension=extension,
+        blobName=blob_name,
+        tamano=tamano,
+        mimeType=mime_type,
+        politicaId=tramite.politicaId,
+        versionPoliticaId=tramite.versionPoliticaId,
+        tramiteId=tramiteId,
+        clienteId=clienteId,
+        subidoPorId="mobile_agent",
+        permisos=permisos_auto,
+        creadoEn=datetime.now(timezone.utc),
+    )
+    await doc.insert()
+
+    await _registrar_evento(str(doc.id), TipoEventoDocumento.UPLOADED, "mobile_agent")
+    logger.info("Documento subido (móvil): %s para trámite %s", file.filename, tramiteId)
+    return _to_response(doc)
+
+
 @router.get("", response_model=List[DocumentoResponse])
 async def list_documentos(
     politicaId: Optional[str] = Query(None),
     tramiteId: Optional[str] = Query(None),
     clienteId: Optional[str] = Query(None),
+    page: int = Query(1, ge=1),
+    per_page: int = Query(15, ge=1, le=100),
     current_user: User = Depends(get_current_user),
 ):
-    """Lista documentos con filtros opcionales."""
+    """Lista documentos con filtros opcionales y paginación."""
     query: dict = {"activo": True}
     if politicaId:
         query["politicaId"] = politicaId
@@ -256,13 +463,21 @@ async def list_documentos(
     if clienteId:
         query["clienteId"] = clienteId
 
-    docs = await Documento.find(query).sort("-creadoEn").to_list()
+    total = await Documento.find(query).count()
+    skip = (page - 1) * per_page
+    docs = await Documento.find(query).sort("-creadoEn").skip(skip).limit(per_page).to_list()
 
-    # Filtrar por permisos (si no es admin, solo muestra los que puede ver)
     if current_user.rol != Rol.ADMINISTRADOR:
         docs = [d for d in docs if _tiene_permiso(d, current_user, NivelPermiso.READ)]
 
-    return [_to_response(d) for d in docs]
+    from fastapi.responses import JSONResponse
+    return JSONResponse(content={
+        "data": [_to_response(d).model_dump(mode="json") for d in docs],
+        "total": total,
+        "page": page,
+        "per_page": per_page,
+        "pages": (total + per_page - 1) // per_page,
+    })
 
 
 @router.get("/por-politica/{politica_id}", response_model=List[DocumentoResponse])
@@ -295,6 +510,79 @@ async def docs_por_cliente(
         docs = [d for d in docs if _tiene_permiso(d, current_user, NivelPermiso.READ)]
 
     return [_to_response(d) for d in docs]
+
+
+@router.get("/{doc_id}/detalle")
+async def get_documento_detalle(
+    doc_id: str,
+    current_user: User = Depends(get_current_user),
+):
+    """Detalle enriquecido: metadatos + nombres de usuarios + historial simplificado."""
+    doc = await Documento.get(PydanticObjectId(doc_id))
+    if not doc or not doc.activo:
+        raise NotFoundException("Documento", doc_id)
+    if not _tiene_permiso(doc, current_user, NivelPermiso.READ):
+        raise HTTPException(status_code=403, detail="Sin permiso para ver este documento")
+
+    # Resolver nombres de usuarios
+    user_ids = {doc.subidoPorId}
+    if doc.modificadoPorId:
+        user_ids.add(doc.modificadoPorId)
+    for p in doc.permisos:
+        user_ids.add(p.userId)
+
+    # Cargar eventos simplificados (solo UPLOADED y EDITED)
+    eventos = await DocumentoEvent.find(
+        DocumentoEvent.documentoId == doc_id,
+        {"tipo": {"$in": [TipoEventoDocumento.UPLOADED.value, TipoEventoDocumento.EDITED.value]}},
+    ).sort("+timestamp").to_list()
+
+    for ev in eventos:
+        user_ids.add(ev.actorId)
+
+    # Resolver todos los nombres de una vez
+    nombre_map: dict[str, str] = {}
+    for uid in user_ids:
+        if uid == "mobile_agent":
+            nombre_map[uid] = "App Móvil"
+            continue
+        if uid == "onlyoffice":
+            nombre_map[uid] = "Editor OnlyOffice"
+            continue
+        try:
+            u = await User.get(PydanticObjectId(uid))
+            nombre_map[uid] = u.nombre if u else uid
+        except Exception:
+            nombre_map[uid] = uid
+
+    # Historial simplificado
+    historial = []
+    for ev in eventos:
+        historial.append({
+            "tipo": ev.tipo.value,
+            "actorId": ev.actorId,
+            "actorNombre": nombre_map.get(ev.actorId, ev.actorId),
+            "timestamp": ev.timestamp.isoformat(),
+        })
+
+    # Permisos con nombres
+    permisos_con_nombre = []
+    for p in doc.permisos:
+        permisos_con_nombre.append({
+            "userId": p.userId,
+            "nombre": nombre_map.get(p.userId, p.userId),
+            "nivel": p.nivel.value,
+        })
+
+    await _registrar_evento(str(doc.id), TipoEventoDocumento.VIEWED, str(current_user.id))
+
+    return {
+        **_to_response(doc).model_dump(),
+        "subidoPorNombre": nombre_map.get(doc.subidoPorId, doc.subidoPorId),
+        "modificadoPorNombre": nombre_map.get(doc.modificadoPorId, "") if doc.modificadoPorId else None,
+        "permisosDetalle": permisos_con_nombre,
+        "historial": historial,
+    }
 
 
 @router.get("/{doc_id}", response_model=DocumentoResponse)
@@ -419,23 +707,19 @@ async def onlyoffice_callback(doc_id: str, body: dict):
         contenido = r.content
 
     import asyncio
-    from azure.storage.blob import ContentSettings
 
-    def _actualizar_blob():
+    def _actualizar_s3():
         from modules.documents.storage_service import _get_cliente
         from config import get_settings
         settings = get_settings()
-        blob_client = _get_cliente().get_blob_client(
-            container=settings.azure_storage_container,
-            blob=doc.blobName,
-        )
-        blob_client.upload_blob(
-            contenido,
-            overwrite=True,
-            content_settings=ContentSettings(content_type=doc.mimeType),
+        _get_cliente().put_object(
+            Bucket=settings.aws_bucket,
+            Key=doc.blobName,
+            Body=contenido,
+            ContentType=doc.mimeType,
         )
 
-    await asyncio.to_thread(_actualizar_blob)
+    await asyncio.to_thread(_actualizar_s3)
 
     doc.tamano = len(contenido)
     doc.actualizadoEn = datetime.now(timezone.utc)
@@ -529,3 +813,99 @@ async def get_historial(
         )
         for e in eventos
     ]
+
+
+# ── Control de versiones ──────────────────────────────────────────────────────
+
+@router.post("/{doc_id}/nueva-version", response_model=DocumentoResponse, status_code=status.HTTP_201_CREATED)
+async def nueva_version(
+    doc_id: str,
+    archivo: UploadFile = File(...),
+    current_user: User = Depends(get_current_user),
+):
+    """
+    Sube una nueva versión de un documento existente.
+    - Marca la versión anterior como esVersionActual=False
+    - Crea nuevo documento con version+1 y versionAnteriorId apuntando al anterior
+    - Hereda permisos, tramiteId y politicaId del documento original
+    """
+    doc_anterior = await Documento.get(PydanticObjectId(doc_id))
+    if not doc_anterior or not doc_anterior.activo:
+        raise NotFoundException("Documento", doc_id)
+    if not _tiene_permiso(doc_anterior, current_user, NivelPermiso.WRITE):
+        raise HTTPException(status_code=403, detail="Sin permiso para versionar este documento")
+
+    # Subir nuevo archivo a S3
+    blob_name, tamano, mime_type, extension = await storage.upload_file(
+        archivo,
+        politica_id=doc_anterior.politicaId,
+        tramite_id=doc_anterior.tramiteId,
+    )
+
+    ahora = datetime.now(timezone.utc)
+
+    # Marcar versión anterior como histórica
+    doc_anterior.esVersionActual = False
+    doc_anterior.actualizadoEn = ahora
+    await doc_anterior.save()
+
+    # Crear nueva versión
+    nuevo_doc = Documento(
+        nombre=doc_anterior.nombre,
+        extension=extension,
+        blobName=blob_name,
+        tamano=tamano,
+        mimeType=mime_type,
+        politicaId=doc_anterior.politicaId,
+        versionPoliticaId=doc_anterior.versionPoliticaId,
+        tramiteId=doc_anterior.tramiteId,
+        clienteId=doc_anterior.clienteId,
+        subidoPorId=str(current_user.id),
+        modificadoPorId=str(current_user.id),
+        permisos=doc_anterior.permisos,
+        activo=True,
+        version=doc_anterior.version + 1,
+        versionAnteriorId=str(doc_anterior.id),
+        esVersionActual=True,
+        creadoEn=ahora,
+        actualizadoEn=ahora,
+    )
+    await nuevo_doc.insert()
+
+    # Registrar evento
+    await DocumentoEvent(
+        documentoId=str(nuevo_doc.id),
+        tipo=TipoEventoDocumento.UPLOADED,
+        actorId=str(current_user.id),
+        detalles={"version": nuevo_doc.version, "versionAnteriorId": str(doc_anterior.id)},
+        timestamp=ahora,
+    ).insert()
+
+    return _to_response(nuevo_doc)
+
+
+@router.get("/{doc_id}/versiones", response_model=List[DocumentoResponse])
+async def get_versiones(
+    doc_id: str,
+    current_user: User = Depends(get_current_user),
+):
+    """
+    Devuelve el historial completo de versiones de un documento,
+    desde la versión actual hacia atrás.
+    """
+    doc = await Documento.get(PydanticObjectId(doc_id))
+    if not doc or not doc.activo:
+        raise NotFoundException("Documento", doc_id)
+    if not _tiene_permiso(doc, current_user, NivelPermiso.READ):
+        raise HTTPException(status_code=403, detail="Sin permiso")
+
+    versiones = [doc]
+    actual = doc
+    while actual.versionAnteriorId:
+        anterior = await Documento.get(PydanticObjectId(actual.versionAnteriorId))
+        if not anterior:
+            break
+        versiones.append(anterior)
+        actual = anterior
+
+    return [_to_response(v) for v in versiones]

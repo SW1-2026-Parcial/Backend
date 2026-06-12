@@ -29,6 +29,9 @@ class DocumentoResponse(BaseModel):
     subidoPorId: str
     modificadoPorId: Optional[str] = None
     permisos: List[PermisoDocumentoSchema] = []
+    version: int = 1
+    versionAnteriorId: Optional[str] = None
+    esVersionActual: bool = True
     creadoEn: datetime
     actualizadoEn: Optional[datetime] = None
 

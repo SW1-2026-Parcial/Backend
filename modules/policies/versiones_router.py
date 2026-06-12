@@ -83,8 +83,10 @@ async def get_version(pol_id: str, vid: str, _: User = Depends(get_current_user)
 async def get_diagram(pol_id: str, vid: str, _: User = Depends(get_current_user)):
     v = await _get_version_or_404(pol_id, vid)
     nodos = await Nodo.find(Nodo.versionPoliticaId == vid).to_list()
+    vr = _version_response(v)
     return DiagramaResponse(
-        version=_version_response(v),
+        version=vr,
+        calles=vr.calles,
         nodos=[n.model_dump(mode="json") for n in nodos],
     )
 

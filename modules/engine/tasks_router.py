@@ -47,6 +47,7 @@ async def _enrich_tasks(tasks: list[Task]) -> list[TaskResponse]:
 
     tramite_ids = list({t.tramiteId for t in tasks})
     depto_ids = list({t.departamentoId for t in tasks if t.departamentoId})
+    user_ids = list({t.assignedTo for t in tasks if t.assignedTo})
 
     tramites_objs = await Tramite.find(
         {"_id": {"$in": [PydanticObjectId(tid) for tid in tramite_ids]}}
@@ -71,12 +72,18 @@ async def _enrich_tasks(tasks: list[Task]) -> list[TaskResponse]:
     ).to_list() if depto_ids else []
     depto_map = {str(d.id): d for d in deptos_objs}
 
+    users_objs = await User.find(
+        {"_id": {"$in": [PydanticObjectId(uid) for uid in user_ids]}}
+    ).to_list() if user_ids else []
+    user_map = {str(u.id): u for u in users_objs}
+
     result = []
     for t in tasks:
         tramite = tramite_map.get(t.tramiteId)
         nodo = nodo_map.get((tramite.versionPoliticaId, t.nodeId)) if tramite else None
         politica = politica_map.get(tramite.politicaId) if tramite else None
         depto = depto_map.get(t.departamentoId) if t.departamentoId else None
+        usuario = user_map.get(t.assignedTo) if t.assignedTo else None
 
         result.append(_to_response(
             t,
@@ -85,6 +92,7 @@ async def _enrich_tasks(tasks: list[Task]) -> list[TaskResponse]:
             nodoNombre=nodo.etiqueta if nodo else None,
             departamentoNombre=depto.nombre if depto else None,
             prioridad=tramite.prioridad.value if tramite else None,
+            assignedToNombre=usuario.nombre if usuario else None,
         ))
     return result
 

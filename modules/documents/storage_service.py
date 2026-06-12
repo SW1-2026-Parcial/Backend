@@ -1,6 +1,6 @@
 """
-Servicio de Azure Blob Storage.
-Equivalente a S3 en AWS — almacena los documentos de forma serverless.
+Servicio de Amazon S3.
+Almacena documentos corporativos en la nube con URLs presignadas para acceso temporal.
 """
 import asyncio
 import logging
@@ -9,19 +9,14 @@ import uuid
 from datetime import datetime, timezone, timedelta
 from typing import Optional
 
-from azure.storage.blob import (
-    BlobServiceClient,
-    ContentSettings,
-    generate_blob_sas,
-    BlobSasPermissions,
-)
+import boto3
+from botocore.exceptions import ClientError
 from fastapi import UploadFile
 
 from config import get_settings
 
 logger = logging.getLogger(__name__)
 
-# Extensiones permitidas
 EXTENSIONES_PERMITIDAS = {
     "pdf", "docx", "doc", "xlsx", "xls",
     "png", "jpg", "jpeg", "gif", "webp",
@@ -29,10 +24,15 @@ EXTENSIONES_PERMITIDAS = {
 }
 
 
-def _get_cliente() -> BlobServiceClient:
-    """Crea cliente de Azure Blob Storage desde la connection string."""
+def _get_cliente():
+    """Crea cliente de Amazon S3 desde las credenciales configuradas."""
     settings = get_settings()
-    return BlobServiceClient.from_connection_string(settings.azure_storage_connection_string)
+    return boto3.client(
+        "s3",
+        aws_access_key_id=settings.aws_access_key_id,
+        aws_secret_access_key=settings.aws_secret_access_key,
+        region_name=settings.aws_region,
+    )
 
 
 def _extension(filename: str) -> str:
@@ -51,25 +51,26 @@ def _mime_type(filename: str, content_type: Optional[str]) -> str:
 async def upload_file(
     file: UploadFile,
     politica_id: str | None = None,
-    tramite_id:  str | None = None,
+    tramite_id: str | None = None,
 ) -> tuple[str, int, str, str]:
     """
-    Sube un archivo a Azure Blob Storage.
+    Sube un archivo a Amazon S3.
 
     Jerarquía de ruta:
       - Con política y trámite:  {politicaId}/{tramiteId}/{uuid}.{ext}
       - Solo con política:       {politicaId}/{uuid}.{ext}
       - Sin contexto:            general/{uuid}.{ext}
 
-    Retorna: (blob_name, tamano_bytes, mime_type, extension)
+    Retorna: (s3_key, tamano_bytes, mime_type, extension)
     """
     settings = get_settings()
     ext = _extension(file.filename or "archivo")
 
     if ext not in EXTENSIONES_PERMITIDAS:
-        raise ValueError(f"Extensión .{ext} no permitida. Permitidas: {', '.join(sorted(EXTENSIONES_PERMITIDAS))}")
+        raise ValueError(
+            f"Extensión .{ext} no permitida. Permitidas: {', '.join(sorted(EXTENSIONES_PERMITIDAS))}"
+        )
 
-    # Construir ruta jerárquica en el blob
     if politica_id and tramite_id:
         prefix = f"{politica_id}/{tramite_id}"
     elif politica_id:
@@ -77,85 +78,67 @@ async def upload_file(
     else:
         prefix = "general"
 
-    blob_name = f"{prefix}/{uuid.uuid4()}.{ext}"
+    s3_key = f"{prefix}/{uuid.uuid4()}.{ext}"
     mime = _mime_type(file.filename or "", file.content_type)
-
     contents = await file.read()
     tamano = len(contents)
 
     def _subir_sync():
         cliente = _get_cliente()
-        blob_client = cliente.get_blob_client(
-            container=settings.azure_storage_container,
-            blob=blob_name,
-        )
-        blob_client.upload_blob(
-            contents,
-            overwrite=True,
-            content_settings=ContentSettings(content_type=mime),
+        cliente.put_object(
+            Bucket=settings.aws_bucket,
+            Key=s3_key,
+            Body=contents,
+            ContentType=mime,
         )
 
     await asyncio.to_thread(_subir_sync)
-    logger.info("Archivo subido a Azure Blob: %s (%d bytes)", blob_name, tamano)
-    return blob_name, tamano, mime, ext
+    logger.info("Archivo subido a S3: %s (%d bytes)", s3_key, tamano)
+    return s3_key, tamano, mime, ext
 
 
-def generate_sas_url(blob_name: str, expires_hours: int = 1) -> str:
+def generate_sas_url(s3_key: str, expires_hours: int = 1) -> str:
     """
-    Genera una URL con SAS token para descarga temporal (equivalente a S3 presigned URL).
+    Genera URL presignada de lectura temporal (equivalente a SAS de Azure).
     Expira en `expires_hours` horas.
     """
     settings = get_settings()
+    cliente = _get_cliente()
 
-    sas_token = generate_blob_sas(
-        account_name=settings.azure_storage_account_name,
-        container_name=settings.azure_storage_container,
-        blob_name=blob_name,
-        account_key=settings.azure_storage_account_key,
-        permission=BlobSasPermissions(read=True),
-        expiry=datetime.now(timezone.utc) + timedelta(hours=expires_hours),
-    )
-
-    url = (
-        f"https://{settings.azure_storage_account_name}.blob.core.windows.net"
-        f"/{settings.azure_storage_container}/{blob_name}?{sas_token}"
+    url = cliente.generate_presigned_url(
+        "get_object",
+        Params={"Bucket": settings.aws_bucket, "Key": s3_key},
+        ExpiresIn=expires_hours * 3600,
     )
     return url
 
 
-def generate_sas_url_write(blob_name: str, expires_hours: int = 1) -> str:
+def generate_sas_url_write(s3_key: str, expires_hours: int = 1) -> str:
     """
-    Genera URL con SAS de escritura (para que OnlyOffice pueda guardar el archivo editado).
+    Genera URL presignada de escritura (para que OnlyOffice pueda guardar el archivo editado).
     """
     settings = get_settings()
+    cliente = _get_cliente()
 
-    sas_token = generate_blob_sas(
-        account_name=settings.azure_storage_account_name,
-        container_name=settings.azure_storage_container,
-        blob_name=blob_name,
-        account_key=settings.azure_storage_account_key,
-        permission=BlobSasPermissions(read=True, write=True, create=True),
-        expiry=datetime.now(timezone.utc) + timedelta(hours=expires_hours),
-    )
-
-    url = (
-        f"https://{settings.azure_storage_account_name}.blob.core.windows.net"
-        f"/{settings.azure_storage_container}/{blob_name}?{sas_token}"
+    url = cliente.generate_presigned_url(
+        "put_object",
+        Params={
+            "Bucket": settings.aws_bucket,
+            "Key": s3_key,
+            "ContentType": "application/octet-stream",
+        },
+        ExpiresIn=expires_hours * 3600,
     )
     return url
 
 
-async def delete_file(blob_name: str) -> None:
-    """Elimina un blob de Azure Storage."""
+async def delete_file(s3_key: str) -> None:
+    """Elimina un objeto de Amazon S3."""
     settings = get_settings()
 
     def _eliminar_sync():
         cliente = _get_cliente()
-        blob_client = cliente.get_blob_client(
-            container=settings.azure_storage_container,
-            blob=blob_name,
-        )
-        blob_client.delete_blob(delete_snapshots="include")
+        cliente.delete_object(Bucket=settings.aws_bucket, Key=s3_key)
 
     await asyncio.to_thread(_eliminar_sync)
-    logger.info("Blob eliminado: %s", blob_name)
+    logger.info("Objeto S3 eliminado: %s", s3_key)
