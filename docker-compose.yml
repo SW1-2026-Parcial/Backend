@@ -1,0 +1,83 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# SP1-BPM — Opción B: todo en Docker
+#
+# Levanta: backend FastAPI + OnlyOffice Document Server
+# El frontend (Angular) y la app móvil corren fuera de Docker como siempre.
+#
+# Comandos:
+#   docker compose up -d          → levantar todo en background
+#   docker compose down           → bajar todo
+#   docker compose logs -f        → ver logs en tiempo real
+#   docker compose logs -f backend → solo logs del backend
+#   docker compose build --no-cache backend → rebuildar el backend
+# ─────────────────────────────────────────────────────────────────────────────
+
+services:
+
+  # ── Backend FastAPI ──────────────────────────────────────────────────────────
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sp1-backend
+    ports:
+      - "8080:8080"
+    env_file:
+      # Lee todas las variables del .env del backend
+      - ./.env
+    environment:
+      # Dentro de docker-compose los servicios se hablan por nombre
+      ONLYOFFICE_URL: http://onlyoffice:80
+      ONLYOFFICE_PUBLIC_URL: http://localhost:8088
+      BACKEND_URL: http://backend:8080
+      # Amazon S3 — sobreescribir desde .env o definir aquí
+      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID:-}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY:-}
+      AWS_REGION: ${AWS_REGION:-us-east-1}
+      AWS_BUCKET: ${AWS_BUCKET:-sp1-documentos}
+    depends_on:
+      onlyoffice:
+        condition: service_healthy
+    restart: unless-stopped
+    networks:
+      - sp1-net
+
+  # ── OnlyOffice Document Server ───────────────────────────────────────────────
+  onlyoffice:
+    image: onlyoffice/documentserver:latest
+    container_name: sp1-onlyoffice
+    ports:
+      # :8088 en el host → :80 dentro del contenedor
+      # El frontend carga el editor desde http://localhost:8088
+      - "8088:80"
+    environment:
+      JWT_ENABLED: "true"
+      JWT_SECRET: "sp1-onlyoffice-jwt-secret-2026"
+      JWT_HEADER: "AuthorizationJwt"
+    volumes:
+      # Persiste datos entre reinicios del contenedor
+      - onlyoffice_data:/var/www/onlyoffice/Data
+      - onlyoffice_logs:/var/log/onlyoffice
+      - onlyoffice_db:/var/lib/postgresql
+      - onlyoffice_rabbitmq:/var/lib/rabbitmq
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/healthcheck"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 90s   # OnlyOffice tarda ~60s en arrancar la primera vez
+    restart: unless-stopped
+    networks:
+      - sp1-net
+
+# ── Volúmenes persistentes ───────────────────────────────────────────────────
+volumes:
+  onlyoffice_data:
+  onlyoffice_logs:
+  onlyoffice_db:
+  onlyoffice_rabbitmq:
+
+# ── Red interna — backend y onlyoffice se ven por nombre ─────────────────────
+networks:
+  sp1-net:
+    driver: bridge
