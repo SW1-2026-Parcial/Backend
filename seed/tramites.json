@@ -1,0 +1,6182 @@
+[
+  {
+    "_id": {
+      "$oid": "220000000000000000000001"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0001",
+    "startedAt": {
+      "$date": "2025-06-13T08:31:08.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-06-15T21:54:45.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000002"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0002",
+    "startedAt": {
+      "$date": "2025-03-11T11:02:21.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-03-14T05:44:41.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000003"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "REJECTED",
+    "currentNodeIds": [],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0003",
+    "startedAt": {
+      "$date": "2026-01-06T09:37:06.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-01-06T19:31:53.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000004"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0004",
+    "startedAt": {
+      "$date": "2025-05-02T10:41:26.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-05-04T17:04:08.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000005"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "CRITICAL",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0005",
+    "startedAt": {
+      "$date": "2025-10-06T05:19:49.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-10-12T18:16:14.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000006"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0006",
+    "startedAt": {
+      "$date": "2025-09-23T18:42:24.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-09-29T15:38:04.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000007"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "REJECTED",
+    "currentNodeIds": [],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0007",
+    "startedAt": {
+      "$date": "2026-03-09T21:12:27.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-03-11T01:26:13.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000008"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "ACTIVE",
+    "currentNodeIds": [
+      "recepcion"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0008",
+    "startedAt": {
+      "$date": "2026-04-27T02:51:31.000Z"
+    },
+    "completedAt": null,
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000009"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "LOW",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0009",
+    "startedAt": {
+      "$date": "2025-03-01T17:29:11.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-03-05T22:58:18.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000010"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0010",
+    "startedAt": {
+      "$date": "2025-12-10T00:04:40.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-12-16T08:53:31.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000011"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "CRITICAL",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0011",
+    "startedAt": {
+      "$date": "2026-03-18T10:48:26.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-03-21T18:12:52.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000012"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0012",
+    "startedAt": {
+      "$date": "2025-06-11T11:57:10.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-06-16T05:49:42.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000013"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "LOW",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0013",
+    "startedAt": {
+      "$date": "2026-04-22T04:15:30.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-04-29T17:06:56.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000014"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0014",
+    "startedAt": {
+      "$date": "2025-04-26T15:44:52.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-04-30T23:49:48.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000015"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0015",
+    "startedAt": {
+      "$date": "2025-08-24T08:33:00.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-08-30T13:38:46.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000016"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "REJECTED",
+    "currentNodeIds": [],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0016",
+    "startedAt": {
+      "$date": "2025-10-08T07:45:06.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-10-09T08:59:43.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000017"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "LOW",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0017",
+    "startedAt": {
+      "$date": "2025-01-17T18:05:47.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-01-20T10:37:05.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000018"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0018",
+    "startedAt": {
+      "$date": "2025-02-14T23:41:39.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-02-17T14:09:01.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000019"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "REJECTED",
+    "currentNodeIds": [],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0019",
+    "startedAt": {
+      "$date": "2025-02-14T01:52:44.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-02-14T15:46:03.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000020"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0020",
+    "startedAt": {
+      "$date": "2025-09-26T23:14:46.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-09-30T05:30:57.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000021"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0021",
+    "startedAt": {
+      "$date": "2026-04-07T20:22:48.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-04-11T16:16:07.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000022"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0022",
+    "startedAt": {
+      "$date": "2025-09-01T15:24:44.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-09-05T08:04:28.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000023"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "ACTIVE",
+    "currentNodeIds": [
+      "recepcion"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0023",
+    "startedAt": {
+      "$date": "2026-05-17T01:32:15.000Z"
+    },
+    "completedAt": null,
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000024"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0024",
+    "startedAt": {
+      "$date": "2026-02-19T08:43:18.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-02-26T07:46:07.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000025"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0025",
+    "startedAt": {
+      "$date": "2025-11-21T10:04:09.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-11-26T05:37:57.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000026"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0026",
+    "startedAt": {
+      "$date": "2026-03-03T13:00:57.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-03-10T08:46:24.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000027"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0027",
+    "startedAt": {
+      "$date": "2025-03-16T04:23:39.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-03-21T23:29:53.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000028"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "CRITICAL",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0028",
+    "startedAt": {
+      "$date": "2026-04-07T03:38:45.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-04-11T01:31:49.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000029"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0029",
+    "startedAt": {
+      "$date": "2025-11-25T01:00:32.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-12-02T19:21:48.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000030"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "REJECTED",
+    "currentNodeIds": [],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0030",
+    "startedAt": {
+      "$date": "2025-10-04T03:27:58.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-10-04T22:01:46.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000031"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0031",
+    "startedAt": {
+      "$date": "2025-07-08T03:48:14.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-07-14T20:09:19.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000032"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "CRITICAL",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0032",
+    "startedAt": {
+      "$date": "2025-05-22T04:48:57.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-05-25T08:28:55.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000033"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0033",
+    "startedAt": {
+      "$date": "2025-10-29T19:56:30.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-11-02T14:48:50.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000034"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0034",
+    "startedAt": {
+      "$date": "2025-12-19T07:41:49.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-12-23T11:03:03.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000035"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "REJECTED",
+    "currentNodeIds": [],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0035",
+    "startedAt": {
+      "$date": "2025-08-20T05:12:43.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-08-21T09:50:08.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000036"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0036",
+    "startedAt": {
+      "$date": "2025-07-20T15:57:46.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-07-27T02:39:08.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000037"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0037",
+    "startedAt": {
+      "$date": "2025-09-10T03:52:00.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-09-12T12:55:02.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000038"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "LOW",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0038",
+    "startedAt": {
+      "$date": "2026-03-05T20:59:59.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-03-08T09:39:11.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000039"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "CRITICAL",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0039",
+    "startedAt": {
+      "$date": "2026-01-21T01:31:03.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-01-25T04:05:16.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000040"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "REJECTED",
+    "currentNodeIds": [],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0040",
+    "startedAt": {
+      "$date": "2026-04-17T02:54:13.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-04-17T19:32:31.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000041"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0041",
+    "startedAt": {
+      "$date": "2025-07-20T07:24:39.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-07-23T20:44:13.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000042"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0042",
+    "startedAt": {
+      "$date": "2025-07-08T14:45:06.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-07-11T21:34:08.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000043"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "ACTIVE",
+    "currentNodeIds": [
+      "recepcion"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0043",
+    "startedAt": {
+      "$date": "2026-04-11T22:41:59.000Z"
+    },
+    "completedAt": null,
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000044"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "LOW",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0044",
+    "startedAt": {
+      "$date": "2025-07-11T19:27:37.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-07-19T10:20:01.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000045"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0045",
+    "startedAt": {
+      "$date": "2025-11-28T04:09:36.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-12-02T20:59:19.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000046"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "LOW",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0046",
+    "startedAt": {
+      "$date": "2025-06-09T16:47:31.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-06-13T14:30:35.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000047"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0047",
+    "startedAt": {
+      "$date": "2025-05-18T00:22:58.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-05-20T14:15:00.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000048"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0048",
+    "startedAt": {
+      "$date": "2025-06-12T01:14:05.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-06-18T12:27:12.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000049"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "REJECTED",
+    "currentNodeIds": [],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0049",
+    "startedAt": {
+      "$date": "2025-09-21T22:21:52.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-09-23T11:40:27.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000050"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0050",
+    "startedAt": {
+      "$date": "2025-05-13T03:26:55.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-05-16T15:27:22.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000051"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0051",
+    "startedAt": {
+      "$date": "2025-11-19T17:37:34.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-11-27T00:29:19.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000052"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "REJECTED",
+    "currentNodeIds": [],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0052",
+    "startedAt": {
+      "$date": "2025-05-24T05:15:51.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-05-25T15:44:25.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000053"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0053",
+    "startedAt": {
+      "$date": "2025-12-01T01:12:04.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-12-04T23:29:13.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000054"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "LOW",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0054",
+    "startedAt": {
+      "$date": "2025-12-24T02:26:23.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-01-01T02:13:04.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000055"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "LOW",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0055",
+    "startedAt": {
+      "$date": "2026-03-30T13:40:53.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-04-06T22:13:16.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000056"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "LOW",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0056",
+    "startedAt": {
+      "$date": "2026-04-10T04:02:19.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-04-13T12:14:21.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000057"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "CRITICAL",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0057",
+    "startedAt": {
+      "$date": "2025-11-19T16:17:13.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-11-24T22:00:42.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000058"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0058",
+    "startedAt": {
+      "$date": "2025-07-15T14:45:22.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-07-20T04:51:48.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000059"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0059",
+    "startedAt": {
+      "$date": "2026-01-02T08:31:57.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-01-08T13:43:30.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000060"
+    },
+    "politicaId": "cc1000000000000000000001",
+    "versionPoliticaId": "cc2000000000000000000001",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0060",
+    "startedAt": {
+      "$date": "2025-10-27T07:37:11.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-10-31T14:38:55.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000061"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0061",
+    "startedAt": {
+      "$date": "2025-12-25T12:36:04.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-12-27T14:58:12.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000062"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0062",
+    "startedAt": {
+      "$date": "2025-12-31T17:35:37.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-01-04T07:08:22.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000063"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0063",
+    "startedAt": {
+      "$date": "2025-10-31T10:38:27.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-11-05T18:31:37.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000064"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "CRITICAL",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0064",
+    "startedAt": {
+      "$date": "2025-04-09T01:20:12.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-04-13T03:25:33.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000065"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0065",
+    "startedAt": {
+      "$date": "2025-05-06T06:24:04.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-05-11T09:31:58.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000066"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0066",
+    "startedAt": {
+      "$date": "2025-03-19T08:47:23.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-03-24T10:06:17.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000067"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0067",
+    "startedAt": {
+      "$date": "2025-06-28T01:41:12.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-07-02T02:40:24.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000068"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "ACTIVE",
+    "currentNodeIds": [
+      "recepcion"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0068",
+    "startedAt": {
+      "$date": "2026-04-10T13:17:50.000Z"
+    },
+    "completedAt": null,
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000069"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0069",
+    "startedAt": {
+      "$date": "2025-05-28T11:56:53.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-06-04T10:32:50.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000070"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "CRITICAL",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0070",
+    "startedAt": {
+      "$date": "2025-10-13T08:49:37.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-10-18T00:13:02.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000071"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "CRITICAL",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0071",
+    "startedAt": {
+      "$date": "2025-09-17T13:15:22.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-09-20T13:12:20.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000072"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0072",
+    "startedAt": {
+      "$date": "2026-04-10T18:07:27.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-04-16T06:25:30.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000073"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0073",
+    "startedAt": {
+      "$date": "2025-10-31T14:27:52.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-11-04T22:29:38.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000074"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0074",
+    "startedAt": {
+      "$date": "2025-03-19T07:18:25.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-03-24T01:43:57.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000075"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0075",
+    "startedAt": {
+      "$date": "2025-12-09T20:52:00.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-12-15T08:19:38.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000076"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0076",
+    "startedAt": {
+      "$date": "2025-05-21T00:30:26.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-05-28T00:36:43.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000077"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0077",
+    "startedAt": {
+      "$date": "2025-08-21T20:36:20.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-08-25T10:09:39.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000078"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "LOW",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0078",
+    "startedAt": {
+      "$date": "2025-07-06T11:05:18.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-07-12T01:51:41.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000079"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0079",
+    "startedAt": {
+      "$date": "2025-01-19T01:53:21.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-01-21T05:21:39.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000080"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "REJECTED",
+    "currentNodeIds": [],
+    "prioridad": "LOW",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0080",
+    "startedAt": {
+      "$date": "2026-02-07T05:29:31.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-02-07T12:19:13.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000081"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0081",
+    "startedAt": {
+      "$date": "2025-12-04T13:22:58.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-12-09T07:50:23.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000082"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "CRITICAL",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0082",
+    "startedAt": {
+      "$date": "2026-04-11T23:27:50.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-04-16T14:48:59.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000083"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0083",
+    "startedAt": {
+      "$date": "2025-11-20T07:26:03.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-11-26T07:58:11.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000084"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "CRITICAL",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0084",
+    "startedAt": {
+      "$date": "2025-03-20T03:59:24.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-03-24T10:43:15.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000085"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "REJECTED",
+    "currentNodeIds": [],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0085",
+    "startedAt": {
+      "$date": "2025-12-18T19:52:43.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-12-20T08:21:13.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000086"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0086",
+    "startedAt": {
+      "$date": "2025-12-21T08:08:00.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-12-24T15:10:13.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000087"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "REJECTED",
+    "currentNodeIds": [],
+    "prioridad": "LOW",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0087",
+    "startedAt": {
+      "$date": "2025-06-08T12:11:13.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-06-09T06:24:42.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000088"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "ACTIVE",
+    "currentNodeIds": [
+      "recepcion"
+    ],
+    "prioridad": "LOW",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0088",
+    "startedAt": {
+      "$date": "2026-04-13T21:20:08.000Z"
+    },
+    "completedAt": null,
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000089"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "REJECTED",
+    "currentNodeIds": [],
+    "prioridad": "CRITICAL",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0089",
+    "startedAt": {
+      "$date": "2025-09-20T05:32:52.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-09-21T10:09:06.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000090"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "LOW",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0090",
+    "startedAt": {
+      "$date": "2025-06-20T02:32:44.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-06-23T19:50:41.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000091"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0091",
+    "startedAt": {
+      "$date": "2026-01-11T19:45:36.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-01-16T09:58:56.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000092"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0092",
+    "startedAt": {
+      "$date": "2026-02-22T00:57:21.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-02-28T08:27:02.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000093"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "LOW",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0093",
+    "startedAt": {
+      "$date": "2025-02-19T07:28:09.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-02-23T17:54:41.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000094"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0094",
+    "startedAt": {
+      "$date": "2026-01-10T17:49:45.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-01-16T18:02:02.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000095"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0095",
+    "startedAt": {
+      "$date": "2025-05-19T01:01:02.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-05-22T17:12:47.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000096"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0096",
+    "startedAt": {
+      "$date": "2026-04-24T02:33:25.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-04-28T09:32:16.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000097"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "LOW",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0097",
+    "startedAt": {
+      "$date": "2025-11-11T02:03:50.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-11-18T14:07:49.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000098"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "CRITICAL",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0098",
+    "startedAt": {
+      "$date": "2026-01-17T23:13:51.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-01-20T15:14:13.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000099"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0099",
+    "startedAt": {
+      "$date": "2026-04-13T08:59:47.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-04-19T20:12:20.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000100"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0100",
+    "startedAt": {
+      "$date": "2025-01-29T17:01:05.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-02-02T05:09:12.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000101"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0101",
+    "startedAt": {
+      "$date": "2026-01-26T01:46:16.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-01-29T06:02:37.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000102"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "ACTIVE",
+    "currentNodeIds": [
+      "recepcion"
+    ],
+    "prioridad": "LOW",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0102",
+    "startedAt": {
+      "$date": "2026-03-08T16:09:06.000Z"
+    },
+    "completedAt": null,
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000103"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0103",
+    "startedAt": {
+      "$date": "2026-01-22T02:41:05.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-01-26T15:15:22.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000104"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0104",
+    "startedAt": {
+      "$date": "2026-01-16T22:14:49.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-01-22T15:04:19.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000105"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "CRITICAL",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0105",
+    "startedAt": {
+      "$date": "2025-05-31T12:56:20.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-06-05T12:19:56.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000106"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "CRITICAL",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0106",
+    "startedAt": {
+      "$date": "2025-04-12T11:53:16.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-04-17T09:33:25.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000107"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0107",
+    "startedAt": {
+      "$date": "2025-05-04T05:11:43.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-05-09T16:12:03.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000108"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0108",
+    "startedAt": {
+      "$date": "2025-04-16T04:47:17.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-04-21T02:29:21.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000109"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "LOW",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0109",
+    "startedAt": {
+      "$date": "2026-03-29T04:52:02.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-04-02T18:33:25.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000110"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "REJECTED",
+    "currentNodeIds": [],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0110",
+    "startedAt": {
+      "$date": "2026-01-09T03:21:22.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-01-09T19:12:32.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000111"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0111",
+    "startedAt": {
+      "$date": "2025-03-05T12:34:15.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-03-10T07:01:29.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000112"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "REJECTED",
+    "currentNodeIds": [],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0112",
+    "startedAt": {
+      "$date": "2025-10-12T02:54:02.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-10-13T15:13:46.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000113"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0113",
+    "startedAt": {
+      "$date": "2025-11-05T14:13:32.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-11-08T23:51:29.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000114"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "REJECTED",
+    "currentNodeIds": [],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0114",
+    "startedAt": {
+      "$date": "2026-03-10T05:51:07.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-03-11T14:11:18.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000115"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "REJECTED",
+    "currentNodeIds": [],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0115",
+    "startedAt": {
+      "$date": "2025-09-06T09:17:48.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-09-07T22:53:59.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000116"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0116",
+    "startedAt": {
+      "$date": "2026-02-03T23:02:28.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-02-07T23:48:34.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000117"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0117",
+    "startedAt": {
+      "$date": "2025-07-22T15:12:39.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-07-26T20:00:04.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000118"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0118",
+    "startedAt": {
+      "$date": "2025-06-11T14:17:54.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-06-14T23:14:55.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000119"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "REJECTED",
+    "currentNodeIds": [],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0119",
+    "startedAt": {
+      "$date": "2025-04-01T14:11:26.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-04-02T19:32:52.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000120"
+    },
+    "politicaId": "cc1000000000000000000002",
+    "versionPoliticaId": "cc2000000000000000000002",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "LOW",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0120",
+    "startedAt": {
+      "$date": "2025-08-05T13:10:54.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-08-09T21:00:35.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000121"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0121",
+    "startedAt": {
+      "$date": "2025-07-09T10:17:03.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-07-17T01:18:20.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000122"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0122",
+    "startedAt": {
+      "$date": "2025-02-17T01:13:20.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-02-23T05:30:48.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000123"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0123",
+    "startedAt": {
+      "$date": "2025-11-13T06:24:17.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-11-17T23:10:04.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000124"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "CRITICAL",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0124",
+    "startedAt": {
+      "$date": "2025-09-25T12:06:06.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-09-29T20:08:59.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000125"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0125",
+    "startedAt": {
+      "$date": "2025-11-13T15:04:48.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-11-16T16:42:37.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000126"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "ACTIVE",
+    "currentNodeIds": [
+      "recepcion"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0126",
+    "startedAt": {
+      "$date": "2026-04-07T09:40:09.000Z"
+    },
+    "completedAt": null,
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000127"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "CRITICAL",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0127",
+    "startedAt": {
+      "$date": "2025-03-21T18:54:48.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-03-25T21:48:34.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000128"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0128",
+    "startedAt": {
+      "$date": "2025-07-25T12:46:19.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-07-30T06:49:29.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000129"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "REJECTED",
+    "currentNodeIds": [],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0129",
+    "startedAt": {
+      "$date": "2025-11-20T07:43:25.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-11-20T23:55:12.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000130"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "LOW",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0130",
+    "startedAt": {
+      "$date": "2026-03-28T22:56:07.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-04-03T07:50:20.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000131"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0131",
+    "startedAt": {
+      "$date": "2025-07-30T06:19:40.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-08-03T01:56:50.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000132"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0132",
+    "startedAt": {
+      "$date": "2025-02-18T09:45:00.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-02-25T13:35:52.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000133"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "CRITICAL",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0133",
+    "startedAt": {
+      "$date": "2026-04-17T04:06:43.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-04-21T05:16:20.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000134"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "REJECTED",
+    "currentNodeIds": [],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0134",
+    "startedAt": {
+      "$date": "2025-02-18T16:57:08.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-02-19T03:24:51.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000135"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0135",
+    "startedAt": {
+      "$date": "2025-05-19T09:08:45.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-05-25T06:49:31.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000136"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0136",
+    "startedAt": {
+      "$date": "2025-04-04T00:47:44.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-04-07T19:31:47.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000137"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0137",
+    "startedAt": {
+      "$date": "2026-04-18T09:32:08.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-04-21T12:19:37.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000138"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0138",
+    "startedAt": {
+      "$date": "2025-05-03T23:19:01.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-05-11T05:00:22.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000139"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "CRITICAL",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0139",
+    "startedAt": {
+      "$date": "2025-07-05T06:58:04.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-07-08T07:09:18.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000140"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0140",
+    "startedAt": {
+      "$date": "2025-07-26T06:19:26.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-07-31T19:19:14.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000141"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0141",
+    "startedAt": {
+      "$date": "2025-10-14T11:40:28.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-10-19T22:12:48.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000142"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "REJECTED",
+    "currentNodeIds": [],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0142",
+    "startedAt": {
+      "$date": "2025-04-28T01:32:12.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-04-29T05:31:45.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000143"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0143",
+    "startedAt": {
+      "$date": "2026-01-01T01:44:11.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-01-05T03:33:23.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000144"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "CRITICAL",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0144",
+    "startedAt": {
+      "$date": "2026-03-06T02:23:38.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-03-10T17:29:57.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000145"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "LOW",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0145",
+    "startedAt": {
+      "$date": "2025-04-21T11:56:55.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-04-26T09:29:49.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000146"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "LOW",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0146",
+    "startedAt": {
+      "$date": "2025-11-18T20:20:32.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-11-24T01:43:18.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000147"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0147",
+    "startedAt": {
+      "$date": "2025-03-11T00:20:07.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-03-13T07:53:20.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000148"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "REJECTED",
+    "currentNodeIds": [],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0148",
+    "startedAt": {
+      "$date": "2025-06-29T11:38:29.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-06-29T22:41:34.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000149"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "CRITICAL",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0149",
+    "startedAt": {
+      "$date": "2025-04-20T15:49:01.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-04-23T21:36:13.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000150"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "REJECTED",
+    "currentNodeIds": [],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0150",
+    "startedAt": {
+      "$date": "2026-02-14T18:11:20.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-02-15T12:00:38.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000151"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0151",
+    "startedAt": {
+      "$date": "2025-01-24T08:56:43.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-01-31T19:10:02.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000152"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0152",
+    "startedAt": {
+      "$date": "2026-02-08T04:13:46.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-02-12T09:38:46.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000153"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0153",
+    "startedAt": {
+      "$date": "2025-12-20T19:19:51.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-12-24T21:04:33.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000154"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "ACTIVE",
+    "currentNodeIds": [
+      "recepcion"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0154",
+    "startedAt": {
+      "$date": "2026-05-15T20:09:02.000Z"
+    },
+    "completedAt": null,
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000155"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0155",
+    "startedAt": {
+      "$date": "2025-12-14T11:11:24.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-12-18T14:09:36.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000156"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "REJECTED",
+    "currentNodeIds": [],
+    "prioridad": "LOW",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0156",
+    "startedAt": {
+      "$date": "2025-01-24T13:03:58.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-01-25T09:22:19.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000157"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0157",
+    "startedAt": {
+      "$date": "2025-07-26T19:57:40.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-07-30T13:25:52.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000158"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "LOW",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0158",
+    "startedAt": {
+      "$date": "2025-10-28T13:09:19.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-11-03T01:19:37.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000159"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "CRITICAL",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0159",
+    "startedAt": {
+      "$date": "2025-11-03T06:16:16.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-11-08T19:39:26.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000160"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0160",
+    "startedAt": {
+      "$date": "2025-11-17T07:14:27.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-11-24T04:27:09.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000161"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0161",
+    "startedAt": {
+      "$date": "2025-12-30T04:31:53.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-01-04T08:16:03.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000162"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0162",
+    "startedAt": {
+      "$date": "2025-03-26T20:19:54.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-03-31T02:50:30.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000163"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "REJECTED",
+    "currentNodeIds": [],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0163",
+    "startedAt": {
+      "$date": "2025-06-17T21:28:02.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-06-18T15:52:46.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000164"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0164",
+    "startedAt": {
+      "$date": "2025-12-25T10:09:32.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-12-30T14:38:39.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000165"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0165",
+    "startedAt": {
+      "$date": "2025-05-10T10:41:25.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-05-13T20:13:30.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000166"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0166",
+    "startedAt": {
+      "$date": "2025-10-20T22:20:05.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-10-26T18:37:41.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000167"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0167",
+    "startedAt": {
+      "$date": "2026-03-05T12:41:40.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-03-13T10:01:39.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000168"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0168",
+    "startedAt": {
+      "$date": "2025-06-10T04:55:47.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-06-16T03:26:30.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000169"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "REJECTED",
+    "currentNodeIds": [],
+    "prioridad": "CRITICAL",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0169",
+    "startedAt": {
+      "$date": "2025-09-23T08:07:57.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-09-23T18:07:16.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000170"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0170",
+    "startedAt": {
+      "$date": "2025-04-03T11:22:34.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-04-07T20:52:02.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000171"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0171",
+    "startedAt": {
+      "$date": "2025-08-31T18:11:59.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-09-08T01:37:11.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000172"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0172",
+    "startedAt": {
+      "$date": "2025-03-24T21:58:21.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-03-29T15:13:47.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000173"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "LOW",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0173",
+    "startedAt": {
+      "$date": "2026-01-22T10:19:38.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-01-26T11:55:30.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000174"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0174",
+    "startedAt": {
+      "$date": "2025-02-08T01:45:18.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-02-13T02:20:58.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000175"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0175",
+    "startedAt": {
+      "$date": "2025-02-26T08:02:38.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-03-02T14:03:35.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000176"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "ACTIVE",
+    "currentNodeIds": [
+      "recepcion"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0176",
+    "startedAt": {
+      "$date": "2026-03-26T17:30:18.000Z"
+    },
+    "completedAt": null,
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000177"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "REJECTED",
+    "currentNodeIds": [],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0177",
+    "startedAt": {
+      "$date": "2025-11-07T06:39:13.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-11-08T02:19:55.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000178"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "CRITICAL",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0178",
+    "startedAt": {
+      "$date": "2025-03-31T02:40:03.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-04-06T11:46:16.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000179"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "LOW",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0179",
+    "startedAt": {
+      "$date": "2025-12-29T18:42:26.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-01-06T03:55:34.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000180"
+    },
+    "politicaId": "cc1000000000000000000003",
+    "versionPoliticaId": "cc2000000000000000000003",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "CRITICAL",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0180",
+    "startedAt": {
+      "$date": "2025-08-17T12:45:23.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-08-24T05:17:06.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000181"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "CRITICAL",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0181",
+    "startedAt": {
+      "$date": "2026-02-26T05:24:12.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-03-03T06:54:00.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000182"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "ACTIVE",
+    "currentNodeIds": [
+      "recepcion"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0182",
+    "startedAt": {
+      "$date": "2026-04-03T22:59:58.000Z"
+    },
+    "completedAt": null,
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000183"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "REJECTED",
+    "currentNodeIds": [],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0183",
+    "startedAt": {
+      "$date": "2025-02-05T07:42:51.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-02-05T18:44:19.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000184"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "ACTIVE",
+    "currentNodeIds": [
+      "recepcion"
+    ],
+    "prioridad": "CRITICAL",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0184",
+    "startedAt": {
+      "$date": "2026-03-13T20:18:51.000Z"
+    },
+    "completedAt": null,
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000185"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "REJECTED",
+    "currentNodeIds": [],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0185",
+    "startedAt": {
+      "$date": "2025-09-09T06:10:53.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-09-10T10:44:30.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000186"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0186",
+    "startedAt": {
+      "$date": "2025-04-04T11:14:09.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-04-12T00:23:02.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000187"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "LOW",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0187",
+    "startedAt": {
+      "$date": "2026-04-26T01:25:53.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-04-28T13:27:19.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000188"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "CRITICAL",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0188",
+    "startedAt": {
+      "$date": "2025-05-27T00:46:51.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-05-31T05:47:12.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000189"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0189",
+    "startedAt": {
+      "$date": "2025-02-25T16:36:39.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-03-01T04:54:49.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000190"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "CRITICAL",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0190",
+    "startedAt": {
+      "$date": "2025-03-18T18:26:05.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-03-24T11:27:29.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000191"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0191",
+    "startedAt": {
+      "$date": "2025-10-31T19:06:51.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-11-06T20:47:02.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000192"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "REJECTED",
+    "currentNodeIds": [],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0192",
+    "startedAt": {
+      "$date": "2025-04-28T22:00:56.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-04-30T07:54:05.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000193"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0193",
+    "startedAt": {
+      "$date": "2025-02-01T00:29:34.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-02-05T16:13:15.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000194"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "ACTIVE",
+    "currentNodeIds": [
+      "recepcion"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0194",
+    "startedAt": {
+      "$date": "2026-05-06T13:53:24.000Z"
+    },
+    "completedAt": null,
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000195"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0195",
+    "startedAt": {
+      "$date": "2025-04-03T10:24:02.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-04-06T08:35:34.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000196"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "LOW",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0196",
+    "startedAt": {
+      "$date": "2026-03-16T18:02:49.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-03-20T07:09:28.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000197"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "LOW",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0197",
+    "startedAt": {
+      "$date": "2025-05-30T16:40:39.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-06-04T16:05:26.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000198"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0198",
+    "startedAt": {
+      "$date": "2025-10-08T04:48:52.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-10-11T23:43:11.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000199"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "CRITICAL",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0199",
+    "startedAt": {
+      "$date": "2025-10-20T12:46:05.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-10-25T17:55:43.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000200"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0200",
+    "startedAt": {
+      "$date": "2025-10-04T18:22:51.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-10-09T21:43:58.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000201"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0201",
+    "startedAt": {
+      "$date": "2025-08-19T01:13:29.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-08-22T20:33:37.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000202"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "REJECTED",
+    "currentNodeIds": [],
+    "prioridad": "CRITICAL",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0202",
+    "startedAt": {
+      "$date": "2025-03-26T14:24:56.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-03-28T03:12:28.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000203"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "CRITICAL",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0203",
+    "startedAt": {
+      "$date": "2025-07-07T03:29:41.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-07-12T02:38:36.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000204"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0204",
+    "startedAt": {
+      "$date": "2025-11-28T20:14:29.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-12-05T16:06:23.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000205"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0205",
+    "startedAt": {
+      "$date": "2025-12-17T04:10:12.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-12-22T08:06:41.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000206"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0206",
+    "startedAt": {
+      "$date": "2025-11-20T00:50:03.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-11-24T16:21:16.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000207"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0207",
+    "startedAt": {
+      "$date": "2026-03-12T08:46:26.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-03-16T04:47:13.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000208"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0208",
+    "startedAt": {
+      "$date": "2025-03-04T04:22:32.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-03-06T18:34:03.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000209"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "LOW",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0209",
+    "startedAt": {
+      "$date": "2025-07-29T05:20:17.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-08-02T12:49:03.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000210"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0210",
+    "startedAt": {
+      "$date": "2025-05-29T23:46:33.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-06-02T00:12:30.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000211"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "CRITICAL",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0211",
+    "startedAt": {
+      "$date": "2026-04-04T19:28:22.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-04-08T19:22:01.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000212"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0212",
+    "startedAt": {
+      "$date": "2025-01-21T20:06:46.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-01-26T21:06:59.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000213"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "LOW",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0213",
+    "startedAt": {
+      "$date": "2025-09-02T05:55:46.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-09-08T04:51:52.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000214"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "LOW",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0214",
+    "startedAt": {
+      "$date": "2026-01-06T16:34:43.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-01-08T21:18:11.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000215"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0215",
+    "startedAt": {
+      "$date": "2025-01-19T13:57:50.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-01-25T04:28:42.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000216"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0216",
+    "startedAt": {
+      "$date": "2025-07-04T18:35:39.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-07-09T15:03:27.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000217"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "REJECTED",
+    "currentNodeIds": [],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0217",
+    "startedAt": {
+      "$date": "2025-10-09T01:51:33.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-10-10T11:51:00.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000218"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "REJECTED",
+    "currentNodeIds": [],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0218",
+    "startedAt": {
+      "$date": "2026-03-31T15:06:04.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-04-02T00:39:11.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000219"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "LOW",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0219",
+    "startedAt": {
+      "$date": "2025-06-17T08:07:50.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-06-20T17:29:49.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000220"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0220",
+    "startedAt": {
+      "$date": "2025-07-25T05:02:13.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-07-29T19:05:21.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000221"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0221",
+    "startedAt": {
+      "$date": "2025-03-15T09:21:43.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-03-21T21:18:41.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000222"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0222",
+    "startedAt": {
+      "$date": "2026-02-15T10:46:09.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-02-18T06:50:40.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000223"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "REJECTED",
+    "currentNodeIds": [],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0223",
+    "startedAt": {
+      "$date": "2026-01-28T18:18:30.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-01-29T08:03:06.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000224"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "REJECTED",
+    "currentNodeIds": [],
+    "prioridad": "LOW",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0224",
+    "startedAt": {
+      "$date": "2025-09-23T17:07:24.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-09-25T04:46:11.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000225"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0225",
+    "startedAt": {
+      "$date": "2025-03-16T10:59:44.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-03-20T06:53:48.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000226"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0226",
+    "startedAt": {
+      "$date": "2025-05-17T05:21:13.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-05-20T14:17:37.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000227"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "REJECTED",
+    "currentNodeIds": [],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0227",
+    "startedAt": {
+      "$date": "2026-04-20T02:09:38.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-04-21T03:04:33.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000228"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0228",
+    "startedAt": {
+      "$date": "2026-03-28T18:21:11.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-04-03T06:25:30.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000229"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0229",
+    "startedAt": {
+      "$date": "2025-10-08T03:51:19.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-10-12T18:46:04.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000230"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0230",
+    "startedAt": {
+      "$date": "2025-04-26T05:30:20.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-05-02T22:54:50.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000231"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "CRITICAL",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0231",
+    "startedAt": {
+      "$date": "2025-03-21T02:28:22.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-03-25T16:31:53.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000232"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "CRITICAL",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0232",
+    "startedAt": {
+      "$date": "2026-03-07T09:43:10.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-03-12T16:08:41.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000233"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0233",
+    "startedAt": {
+      "$date": "2025-07-12T11:14:51.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-07-16T16:16:10.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000234"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "LOW",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0234",
+    "startedAt": {
+      "$date": "2025-02-13T07:48:37.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-02-19T22:22:50.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000235"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0235",
+    "startedAt": {
+      "$date": "2025-02-12T00:13:41.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-02-14T23:06:28.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000236"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0236",
+    "startedAt": {
+      "$date": "2025-08-17T18:28:47.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-08-22T00:57:37.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000237"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0237",
+    "startedAt": {
+      "$date": "2026-03-28T10:13:25.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-04-02T18:41:55.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000238"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0238",
+    "startedAt": {
+      "$date": "2025-08-26T03:27:57.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-08-29T01:46:54.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000239"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0239",
+    "startedAt": {
+      "$date": "2025-07-12T00:44:17.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-07-14T22:02:30.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000240"
+    },
+    "politicaId": "cc1000000000000000000004",
+    "versionPoliticaId": "cc2000000000000000000004",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0240",
+    "startedAt": {
+      "$date": "2026-04-07T21:49:05.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-04-14T14:01:23.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000241"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "REJECTED",
+    "currentNodeIds": [],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0241",
+    "startedAt": {
+      "$date": "2025-10-01T22:27:00.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-10-02T15:23:09.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000242"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "REJECTED",
+    "currentNodeIds": [],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0242",
+    "startedAt": {
+      "$date": "2026-04-07T07:27:02.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-04-08T06:52:31.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000243"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "LOW",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0243",
+    "startedAt": {
+      "$date": "2025-11-06T23:40:41.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-11-13T08:38:47.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000244"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0244",
+    "startedAt": {
+      "$date": "2025-11-18T03:49:17.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-11-22T10:08:33.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000245"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0245",
+    "startedAt": {
+      "$date": "2025-02-25T19:22:44.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-02-28T18:51:19.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000246"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0246",
+    "startedAt": {
+      "$date": "2025-10-19T04:00:10.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-10-25T13:36:03.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000247"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0247",
+    "startedAt": {
+      "$date": "2026-03-10T04:08:34.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-03-13T15:26:12.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000248"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "CRITICAL",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0248",
+    "startedAt": {
+      "$date": "2025-01-20T14:33:10.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-01-24T12:52:59.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000249"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0249",
+    "startedAt": {
+      "$date": "2025-06-10T00:35:08.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-06-14T16:33:46.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000250"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0250",
+    "startedAt": {
+      "$date": "2025-01-21T08:56:07.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-01-24T06:07:40.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000251"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0251",
+    "startedAt": {
+      "$date": "2025-06-13T06:43:26.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-06-15T15:33:15.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000252"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0252",
+    "startedAt": {
+      "$date": "2025-05-18T04:43:53.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-05-22T02:40:32.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000253"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "CRITICAL",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0253",
+    "startedAt": {
+      "$date": "2025-07-22T19:30:49.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-07-25T23:14:26.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000254"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "ACTIVE",
+    "currentNodeIds": [
+      "recepcion"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0254",
+    "startedAt": {
+      "$date": "2026-05-16T20:15:00.000Z"
+    },
+    "completedAt": null,
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000255"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0255",
+    "startedAt": {
+      "$date": "2026-03-24T16:24:23.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-03-30T01:06:59.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000256"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0256",
+    "startedAt": {
+      "$date": "2026-01-13T19:30:37.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-01-19T19:06:39.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000257"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0257",
+    "startedAt": {
+      "$date": "2025-03-05T04:46:33.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-03-10T07:10:43.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000258"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "ACTIVE",
+    "currentNodeIds": [
+      "recepcion"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0258",
+    "startedAt": {
+      "$date": "2026-03-10T14:06:45.000Z"
+    },
+    "completedAt": null,
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000259"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0259",
+    "startedAt": {
+      "$date": "2026-04-18T12:00:23.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-04-21T08:56:09.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000260"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "CRITICAL",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0260",
+    "startedAt": {
+      "$date": "2025-09-08T01:11:29.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-09-10T07:07:34.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000261"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "CRITICAL",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0261",
+    "startedAt": {
+      "$date": "2026-04-07T19:55:32.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-04-12T19:51:41.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000262"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "CRITICAL",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0262",
+    "startedAt": {
+      "$date": "2025-10-30T17:21:14.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-11-04T06:59:28.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000263"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "LOW",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0263",
+    "startedAt": {
+      "$date": "2025-09-05T06:37:50.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-09-10T14:06:27.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000264"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0264",
+    "startedAt": {
+      "$date": "2025-08-02T00:43:52.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-08-07T14:39:47.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000265"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "REJECTED",
+    "currentNodeIds": [],
+    "prioridad": "CRITICAL",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0265",
+    "startedAt": {
+      "$date": "2025-12-18T08:01:14.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-12-19T17:13:46.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000266"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0266",
+    "startedAt": {
+      "$date": "2026-02-26T07:12:51.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-03-02T04:19:30.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000267"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0267",
+    "startedAt": {
+      "$date": "2025-03-20T02:45:08.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-03-23T16:22:08.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000268"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0268",
+    "startedAt": {
+      "$date": "2025-03-11T15:32:26.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-03-16T16:20:45.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000269"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0269",
+    "startedAt": {
+      "$date": "2025-02-18T20:34:41.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-02-21T19:04:22.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000270"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0270",
+    "startedAt": {
+      "$date": "2026-03-15T10:05:08.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-03-20T15:11:22.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000271"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "REJECTED",
+    "currentNodeIds": [],
+    "prioridad": "LOW",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0271",
+    "startedAt": {
+      "$date": "2025-11-12T20:52:14.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-11-14T00:10:15.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000272"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "REJECTED",
+    "currentNodeIds": [],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0272",
+    "startedAt": {
+      "$date": "2026-02-13T23:52:43.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-02-14T09:56:01.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000273"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "REJECTED",
+    "currentNodeIds": [],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0273",
+    "startedAt": {
+      "$date": "2025-01-31T16:34:26.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-02-02T02:30:41.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000274"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0274",
+    "startedAt": {
+      "$date": "2025-09-06T19:46:08.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-09-12T08:54:30.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000275"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0275",
+    "startedAt": {
+      "$date": "2025-07-10T15:33:53.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-07-14T23:27:27.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000276"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0276",
+    "startedAt": {
+      "$date": "2025-03-08T16:08:43.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-03-13T22:30:56.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000277"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0277",
+    "startedAt": {
+      "$date": "2026-03-31T10:26:57.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-04-03T00:32:21.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000278"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0278",
+    "startedAt": {
+      "$date": "2025-06-14T02:37:27.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-06-20T13:21:26.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000279"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0279",
+    "startedAt": {
+      "$date": "2025-09-15T00:49:55.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-09-19T17:16:20.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000280"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "REJECTED",
+    "currentNodeIds": [],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0280",
+    "startedAt": {
+      "$date": "2025-11-11T21:37:09.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-11-12T23:14:53.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000281"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0281",
+    "startedAt": {
+      "$date": "2025-08-31T16:22:53.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-09-03T01:43:49.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000282"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "REJECTED",
+    "currentNodeIds": [],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0282",
+    "startedAt": {
+      "$date": "2025-03-26T01:04:14.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-03-27T04:29:07.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000283"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0283",
+    "startedAt": {
+      "$date": "2025-11-09T07:54:27.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-11-14T02:29:16.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000284"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "LOW",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0284",
+    "startedAt": {
+      "$date": "2025-04-27T04:39:42.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-04-28T23:19:09.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000285"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "REJECTED",
+    "currentNodeIds": [],
+    "prioridad": "LOW",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0285",
+    "startedAt": {
+      "$date": "2026-04-26T23:29:20.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-04-27T13:27:37.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000286"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0286",
+    "startedAt": {
+      "$date": "2025-10-13T02:12:04.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-10-18T12:38:55.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000287"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0287",
+    "startedAt": {
+      "$date": "2026-04-09T16:42:50.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-04-12T18:44:13.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000288"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0288",
+    "startedAt": {
+      "$date": "2025-03-01T04:38:21.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-03-08T14:44:14.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000289"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0289",
+    "startedAt": {
+      "$date": "2025-06-03T17:42:49.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-06-06T17:45:37.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000290"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0290",
+    "startedAt": {
+      "$date": "2025-03-08T16:33:21.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-03-11T14:34:53.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000291"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "ACTIVE",
+    "currentNodeIds": [
+      "recepcion"
+    ],
+    "prioridad": "CRITICAL",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0291",
+    "startedAt": {
+      "$date": "2026-04-14T21:38:00.000Z"
+    },
+    "completedAt": null,
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000292"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "CRITICAL",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0292",
+    "startedAt": {
+      "$date": "2026-02-23T17:30:32.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-03-01T07:00:43.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000293"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "CRITICAL",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0293",
+    "startedAt": {
+      "$date": "2025-09-11T10:46:55.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-09-15T11:58:53.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000294"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "HIGH",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0294",
+    "startedAt": {
+      "$date": "2025-05-14T16:13:04.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-05-19T07:29:34.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000295"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0295",
+    "startedAt": {
+      "$date": "2025-02-18T04:46:40.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-02-23T03:36:24.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000296"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0296",
+    "startedAt": {
+      "$date": "2025-05-10T23:32:24.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-05-15T04:34:37.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000297"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0297",
+    "startedAt": {
+      "$date": "2025-02-06T12:27:46.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-02-10T00:30:22.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000298"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "LOW",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0298",
+    "startedAt": {
+      "$date": "2026-01-03T20:42:16.000Z"
+    },
+    "completedAt": {
+      "$date": "2026-01-09T01:22:01.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000299"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f1d9079bac949c125ee967",
+    "ticketNumber": "TRM-2026-0299",
+    "startedAt": {
+      "$date": "2025-05-27T15:58:17.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-06-01T05:15:51.000Z"
+    },
+    "fcmToken": null
+  },
+  {
+    "_id": {
+      "$oid": "220000000000000000000300"
+    },
+    "politicaId": "cc1000000000000000000005",
+    "versionPoliticaId": "cc2000000000000000000005",
+    "status": "COMPLETED",
+    "currentNodeIds": [
+      "fin"
+    ],
+    "prioridad": "MEDIUM",
+    "initiatedBy": "69f0d29b1665e461c0cf689c",
+    "ticketNumber": "TRM-2026-0300",
+    "startedAt": {
+      "$date": "2025-11-09T02:51:26.000Z"
+    },
+    "completedAt": {
+      "$date": "2025-11-13T00:52:43.000Z"
+    },
+    "fcmToken": null
+  }
+]

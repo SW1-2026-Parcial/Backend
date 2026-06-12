@@ -7,9 +7,9 @@ from models.tramite_event import TramiteEventType
 
 class CreateTramiteRequest(BaseModel):
     politicaId: str
-    versionPoliticaId: str
+    versionPoliticaId: Optional[str] = None
     prioridad: Prioridad = Prioridad.MEDIUM
-    fcmToken: Optional[str] = None  # para notificaciones push (opcional)
+    fcmToken: Optional[str] = None
 
 
 class TramiteResponse(BaseModel):
@@ -32,6 +32,7 @@ class TramiteEventResponse(BaseModel):
     tramiteId: str
     tipo: str
     nodeId: Optional[str] = None
+    taskId: Optional[str] = None
     actorId: Optional[str] = None
     formData: Optional[dict] = None
     branchTaken: Optional[bool] = None

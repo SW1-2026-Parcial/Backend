@@ -77,4 +77,4 @@ class ValidacionResultado(BaseModel):
 
 class InstruccionRequest(BaseModel):
     instruccion: str
-    version_id: str
+    version_id: Optional[str] = None

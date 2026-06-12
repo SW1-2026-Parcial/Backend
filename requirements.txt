@@ -10,7 +10,13 @@ httpx==0.27.0
 websockets==12.0
 
 # Ciclo 2 — Gestión Documental
-azure-storage-blob==12.19.0
+boto3==1.34.0
 python-multipart==0.0.9
 python-docx==1.1.0
 openpyxl==3.1.5
+
+# Ciclo 2 — LLM (Agente + Reportes via OpenRouter)
+openai>=1.30.0
+
+# Ciclo 2 — OnlyOffice JWT signing
+PyJWT>=2.8.0

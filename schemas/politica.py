@@ -58,4 +58,5 @@ class VersionResponse(BaseModel):
 class DiagramaResponse(BaseModel):
     """Version + nodos juntos — para el canvas."""
     version: VersionResponse
+    calles: List[Calle] = []
     nodos: List[dict] = []

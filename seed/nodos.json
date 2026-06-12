@@ -1,0 +1,1101 @@
+[
+  {
+    "_id": {
+      "$oid": "110000000000000000000001"
+    },
+    "versionPoliticaId": "cc2000000000000000000001",
+    "nodoId": "inicio",
+    "calleId": null,
+    "tipoNodo": "START",
+    "etiqueta": "Inicio",
+    "salidas": [
+      {
+        "nodoDestino": "recepcion",
+        "rama": true,
+        "etiqueta": ""
+      }
+    ],
+    "formulario": [],
+    "posicionCanvas": {
+      "x": 80,
+      "y": 220
+    },
+    "instruccionAvance": null,
+    "instruccionRechazo": null,
+    "creadoEn": {
+      "$date": "2025-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "110000000000000000000002"
+    },
+    "versionPoliticaId": "cc2000000000000000000001",
+    "nodoId": "recepcion",
+    "calleId": "recepcion",
+    "tipoNodo": "ACTIVITY",
+    "etiqueta": "Recepción — Renovación de Credencial",
+    "departamentoId": "dd1000000000000000000005",
+    "salidas": [
+      {
+        "nodoDestino": "revision",
+        "rama": true,
+        "etiqueta": ""
+      }
+    ],
+    "formulario": [
+      {
+        "nombre": "solicitante",
+        "etiqueta": "Nombre del solicitante",
+        "tipo": "TEXT",
+        "requerido": true
+      },
+      {
+        "nombre": "descripcion",
+        "etiqueta": "Motivo de la renovación",
+        "tipo": "TEXTAREA",
+        "requerido": true
+      },
+      {
+        "nombre": "fecha_requerida",
+        "etiqueta": "Fecha requerida",
+        "tipo": "DATE",
+        "requerido": false
+      },
+      {
+        "nombre": "doc_cedula",
+        "etiqueta": "Copia de cédula de identidad",
+        "tipo": "FILE",
+        "requerido": true
+      },
+      {
+        "nombre": "doc_foto_reciente",
+        "etiqueta": "Fotografía reciente (JPG/PNG)",
+        "tipo": "FILE",
+        "requerido": true
+      }
+    ],
+    "instruccionAvance": "Verificar documentación y registrar la solicitud. Adjuntar los archivos requeridos.",
+    "instruccionRechazo": "Rechazar si la documentación está incompleta, ilegible o fuera de plazo.",
+    "posicionCanvas": {
+      "x": 280,
+      "y": 220
+    },
+    "creadoEn": {
+      "$date": "2025-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "110000000000000000000003"
+    },
+    "versionPoliticaId": "cc2000000000000000000001",
+    "nodoId": "revision",
+    "calleId": null,
+    "tipoNodo": "DECISION",
+    "etiqueta": "Revisión",
+    "salidas": [
+      {
+        "nodoDestino": "procesamiento",
+        "rama": false,
+        "etiqueta": "Aprobado"
+      },
+      {
+        "nodoDestino": "devolucion",
+        "rama": true,
+        "etiqueta": "Devolver"
+      }
+    ],
+    "formulario": [],
+    "posicionCanvas": {
+      "x": 480,
+      "y": 220
+    },
+    "instruccionAvance": null,
+    "instruccionRechazo": null,
+    "creadoEn": {
+      "$date": "2025-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "110000000000000000000004"
+    },
+    "versionPoliticaId": "cc2000000000000000000001",
+    "nodoId": "procesamiento",
+    "calleId": "procesamiento",
+    "tipoNodo": "ACTIVITY",
+    "etiqueta": "Procesamiento — Renovación de Credencial",
+    "departamentoId": "dd1000000000000000000001",
+    "salidas": [
+      {
+        "nodoDestino": "fin",
+        "rama": true,
+        "etiqueta": ""
+      }
+    ],
+    "formulario": [
+      {
+        "nombre": "resultado",
+        "etiqueta": "Resultado de la gestión",
+        "tipo": "TEXT",
+        "requerido": true
+      },
+      {
+        "nombre": "doc_credencial",
+        "etiqueta": "Credencial emitida (PDF)",
+        "tipo": "FILE",
+        "requerido": true
+      },
+      {
+        "nombre": "observaciones",
+        "etiqueta": "Observaciones",
+        "tipo": "TEXTAREA",
+        "requerido": false
+      }
+    ],
+    "instruccionAvance": "Procesar la solicitud aprobada. Adjuntar el documento de resolución.",
+    "instruccionRechazo": "Devolver si no es posible procesar.",
+    "posicionCanvas": {
+      "x": 680,
+      "y": 100
+    },
+    "creadoEn": {
+      "$date": "2025-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "110000000000000000000005"
+    },
+    "versionPoliticaId": "cc2000000000000000000001",
+    "nodoId": "devolucion",
+    "calleId": "devolucion",
+    "tipoNodo": "ACTIVITY",
+    "etiqueta": "Devolución — Renovación de Credencial",
+    "departamentoId": "dd1000000000000000000001",
+    "salidas": [
+      {
+        "nodoDestino": "fin",
+        "rama": true,
+        "etiqueta": ""
+      }
+    ],
+    "formulario": [
+      {
+        "nombre": "motivo_devolucion",
+        "etiqueta": "Motivo de devolución",
+        "tipo": "TEXTAREA",
+        "requerido": true
+      }
+    ],
+    "instruccionAvance": "Documentar el motivo de devolución y notificar al solicitante.",
+    "instruccionRechazo": null,
+    "posicionCanvas": {
+      "x": 680,
+      "y": 340
+    },
+    "creadoEn": {
+      "$date": "2025-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "110000000000000000000006"
+    },
+    "versionPoliticaId": "cc2000000000000000000001",
+    "nodoId": "fin",
+    "calleId": null,
+    "tipoNodo": "END",
+    "etiqueta": "Fin",
+    "salidas": [],
+    "formulario": [],
+    "posicionCanvas": {
+      "x": 880,
+      "y": 220
+    },
+    "instruccionAvance": null,
+    "instruccionRechazo": null,
+    "creadoEn": {
+      "$date": "2025-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "110000000000000000000007"
+    },
+    "versionPoliticaId": "cc2000000000000000000002",
+    "nodoId": "inicio",
+    "calleId": null,
+    "tipoNodo": "START",
+    "etiqueta": "Inicio",
+    "salidas": [
+      {
+        "nodoDestino": "recepcion",
+        "rama": true,
+        "etiqueta": ""
+      }
+    ],
+    "formulario": [],
+    "posicionCanvas": {
+      "x": 80,
+      "y": 220
+    },
+    "instruccionAvance": null,
+    "instruccionRechazo": null,
+    "creadoEn": {
+      "$date": "2025-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "110000000000000000000008"
+    },
+    "versionPoliticaId": "cc2000000000000000000002",
+    "nodoId": "recepcion",
+    "calleId": "recepcion",
+    "tipoNodo": "ACTIVITY",
+    "etiqueta": "Recepción — Solicitud de Insumos",
+    "departamentoId": "dd1000000000000000000005",
+    "salidas": [
+      {
+        "nodoDestino": "revision",
+        "rama": true,
+        "etiqueta": ""
+      }
+    ],
+    "formulario": [
+      {
+        "nombre": "solicitante",
+        "etiqueta": "Nombre del solicitante",
+        "tipo": "TEXT",
+        "requerido": true
+      },
+      {
+        "nombre": "descripcion",
+        "etiqueta": "Descripción del requerimiento",
+        "tipo": "TEXTAREA",
+        "requerido": true
+      },
+      {
+        "nombre": "fecha_requerida",
+        "etiqueta": "Fecha de entrega requerida",
+        "tipo": "DATE",
+        "requerido": false
+      },
+      {
+        "nombre": "doc_formulario_req",
+        "etiqueta": "Formulario de requisición (PDF)",
+        "tipo": "FILE",
+        "requerido": true
+      },
+      {
+        "nombre": "doc_cotizacion",
+        "etiqueta": "Cotización de referencia (PDF)",
+        "tipo": "FILE",
+        "requerido": false
+      }
+    ],
+    "instruccionAvance": "Verificar documentación y registrar la solicitud. Adjuntar los archivos requeridos.",
+    "instruccionRechazo": "Rechazar si la documentación está incompleta, ilegible o fuera de plazo.",
+    "posicionCanvas": {
+      "x": 280,
+      "y": 220
+    },
+    "creadoEn": {
+      "$date": "2025-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "110000000000000000000009"
+    },
+    "versionPoliticaId": "cc2000000000000000000002",
+    "nodoId": "revision",
+    "calleId": null,
+    "tipoNodo": "DECISION",
+    "etiqueta": "Revisión",
+    "salidas": [
+      {
+        "nodoDestino": "procesamiento",
+        "rama": false,
+        "etiqueta": "Aprobado"
+      },
+      {
+        "nodoDestino": "devolucion",
+        "rama": true,
+        "etiqueta": "Devolver"
+      }
+    ],
+    "formulario": [],
+    "posicionCanvas": {
+      "x": 480,
+      "y": 220
+    },
+    "instruccionAvance": null,
+    "instruccionRechazo": null,
+    "creadoEn": {
+      "$date": "2025-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "110000000000000000000010"
+    },
+    "versionPoliticaId": "cc2000000000000000000002",
+    "nodoId": "procesamiento",
+    "calleId": "procesamiento",
+    "tipoNodo": "ACTIVITY",
+    "etiqueta": "Procesamiento — Solicitud de Insumos",
+    "departamentoId": "dd1000000000000000000002",
+    "salidas": [
+      {
+        "nodoDestino": "fin",
+        "rama": true,
+        "etiqueta": ""
+      }
+    ],
+    "formulario": [
+      {
+        "nombre": "resultado",
+        "etiqueta": "Resultado de la compra",
+        "tipo": "TEXT",
+        "requerido": true
+      },
+      {
+        "nombre": "doc_orden_compra",
+        "etiqueta": "Orden de compra generada (PDF)",
+        "tipo": "FILE",
+        "requerido": true
+      },
+      {
+        "nombre": "observaciones",
+        "etiqueta": "Observaciones",
+        "tipo": "TEXTAREA",
+        "requerido": false
+      }
+    ],
+    "instruccionAvance": "Procesar la solicitud aprobada. Adjuntar el documento de resolución.",
+    "instruccionRechazo": "Devolver si no es posible procesar.",
+    "posicionCanvas": {
+      "x": 680,
+      "y": 100
+    },
+    "creadoEn": {
+      "$date": "2025-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "110000000000000000000011"
+    },
+    "versionPoliticaId": "cc2000000000000000000002",
+    "nodoId": "devolucion",
+    "calleId": "devolucion",
+    "tipoNodo": "ACTIVITY",
+    "etiqueta": "Devolución — Solicitud de Insumos",
+    "departamentoId": "dd1000000000000000000002",
+    "salidas": [
+      {
+        "nodoDestino": "fin",
+        "rama": true,
+        "etiqueta": ""
+      }
+    ],
+    "formulario": [
+      {
+        "nombre": "motivo_devolucion",
+        "etiqueta": "Motivo de devolución",
+        "tipo": "TEXTAREA",
+        "requerido": true
+      }
+    ],
+    "instruccionAvance": "Documentar el motivo de devolución y notificar al solicitante.",
+    "instruccionRechazo": null,
+    "posicionCanvas": {
+      "x": 680,
+      "y": 340
+    },
+    "creadoEn": {
+      "$date": "2025-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "110000000000000000000012"
+    },
+    "versionPoliticaId": "cc2000000000000000000002",
+    "nodoId": "fin",
+    "calleId": null,
+    "tipoNodo": "END",
+    "etiqueta": "Fin",
+    "salidas": [],
+    "formulario": [],
+    "posicionCanvas": {
+      "x": 880,
+      "y": 220
+    },
+    "instruccionAvance": null,
+    "instruccionRechazo": null,
+    "creadoEn": {
+      "$date": "2025-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "110000000000000000000013"
+    },
+    "versionPoliticaId": "cc2000000000000000000003",
+    "nodoId": "inicio",
+    "calleId": null,
+    "tipoNodo": "START",
+    "etiqueta": "Inicio",
+    "salidas": [
+      {
+        "nodoDestino": "recepcion",
+        "rama": true,
+        "etiqueta": ""
+      }
+    ],
+    "formulario": [],
+    "posicionCanvas": {
+      "x": 80,
+      "y": 220
+    },
+    "instruccionAvance": null,
+    "instruccionRechazo": null,
+    "creadoEn": {
+      "$date": "2025-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "110000000000000000000014"
+    },
+    "versionPoliticaId": "cc2000000000000000000003",
+    "nodoId": "recepcion",
+    "calleId": "recepcion",
+    "tipoNodo": "ACTIVITY",
+    "etiqueta": "Recepción — Reporte de Incidencia Técnica",
+    "departamentoId": "dd1000000000000000000005",
+    "salidas": [
+      {
+        "nodoDestino": "revision",
+        "rama": true,
+        "etiqueta": ""
+      }
+    ],
+    "formulario": [
+      {
+        "nombre": "solicitante",
+        "etiqueta": "Nombre del reportante",
+        "tipo": "TEXT",
+        "requerido": true
+      },
+      {
+        "nombre": "descripcion",
+        "etiqueta": "Descripción de la incidencia",
+        "tipo": "TEXTAREA",
+        "requerido": true
+      },
+      {
+        "nombre": "fecha_requerida",
+        "etiqueta": "Fecha de ocurrencia",
+        "tipo": "DATE",
+        "requerido": true
+      },
+      {
+        "nombre": "doc_evidencia",
+        "etiqueta": "Captura de pantalla / evidencia",
+        "tipo": "FILE",
+        "requerido": false
+      }
+    ],
+    "instruccionAvance": "Verificar documentación y registrar la solicitud. Adjuntar los archivos requeridos.",
+    "instruccionRechazo": "Rechazar si la documentación está incompleta, ilegible o fuera de plazo.",
+    "posicionCanvas": {
+      "x": 280,
+      "y": 220
+    },
+    "creadoEn": {
+      "$date": "2025-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "110000000000000000000015"
+    },
+    "versionPoliticaId": "cc2000000000000000000003",
+    "nodoId": "revision",
+    "calleId": null,
+    "tipoNodo": "DECISION",
+    "etiqueta": "Revisión",
+    "salidas": [
+      {
+        "nodoDestino": "procesamiento",
+        "rama": false,
+        "etiqueta": "Aprobado"
+      },
+      {
+        "nodoDestino": "devolucion",
+        "rama": true,
+        "etiqueta": "Devolver"
+      }
+    ],
+    "formulario": [],
+    "posicionCanvas": {
+      "x": 480,
+      "y": 220
+    },
+    "instruccionAvance": null,
+    "instruccionRechazo": null,
+    "creadoEn": {
+      "$date": "2025-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "110000000000000000000016"
+    },
+    "versionPoliticaId": "cc2000000000000000000003",
+    "nodoId": "procesamiento",
+    "calleId": "procesamiento",
+    "tipoNodo": "ACTIVITY",
+    "etiqueta": "Procesamiento — Reporte de Incidencia Técnica",
+    "departamentoId": "dd1000000000000000000001",
+    "salidas": [
+      {
+        "nodoDestino": "fin",
+        "rama": true,
+        "etiqueta": ""
+      }
+    ],
+    "formulario": [
+      {
+        "nombre": "resultado",
+        "etiqueta": "Diagnóstico y solución aplicada",
+        "tipo": "TEXTAREA",
+        "requerido": true
+      },
+      {
+        "nombre": "doc_informe_tecnico",
+        "etiqueta": "Informe técnico (PDF)",
+        "tipo": "FILE",
+        "requerido": true
+      },
+      {
+        "nombre": "observaciones",
+        "etiqueta": "Observaciones adicionales",
+        "tipo": "TEXTAREA",
+        "requerido": false
+      }
+    ],
+    "instruccionAvance": "Procesar la solicitud aprobada. Adjuntar el documento de resolución.",
+    "instruccionRechazo": "Devolver si no es posible procesar.",
+    "posicionCanvas": {
+      "x": 680,
+      "y": 100
+    },
+    "creadoEn": {
+      "$date": "2025-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "110000000000000000000017"
+    },
+    "versionPoliticaId": "cc2000000000000000000003",
+    "nodoId": "devolucion",
+    "calleId": "devolucion",
+    "tipoNodo": "ACTIVITY",
+    "etiqueta": "Devolución — Reporte de Incidencia Técnica",
+    "departamentoId": "dd1000000000000000000001",
+    "salidas": [
+      {
+        "nodoDestino": "fin",
+        "rama": true,
+        "etiqueta": ""
+      }
+    ],
+    "formulario": [
+      {
+        "nombre": "motivo_devolucion",
+        "etiqueta": "Motivo de devolución",
+        "tipo": "TEXTAREA",
+        "requerido": true
+      }
+    ],
+    "instruccionAvance": "Documentar el motivo de devolución y notificar al solicitante.",
+    "instruccionRechazo": null,
+    "posicionCanvas": {
+      "x": 680,
+      "y": 340
+    },
+    "creadoEn": {
+      "$date": "2025-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "110000000000000000000018"
+    },
+    "versionPoliticaId": "cc2000000000000000000003",
+    "nodoId": "fin",
+    "calleId": null,
+    "tipoNodo": "END",
+    "etiqueta": "Fin",
+    "salidas": [],
+    "formulario": [],
+    "posicionCanvas": {
+      "x": 880,
+      "y": 220
+    },
+    "instruccionAvance": null,
+    "instruccionRechazo": null,
+    "creadoEn": {
+      "$date": "2025-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "110000000000000000000019"
+    },
+    "versionPoliticaId": "cc2000000000000000000004",
+    "nodoId": "inicio",
+    "calleId": null,
+    "tipoNodo": "START",
+    "etiqueta": "Inicio",
+    "salidas": [
+      {
+        "nodoDestino": "recepcion",
+        "rama": true,
+        "etiqueta": ""
+      }
+    ],
+    "formulario": [],
+    "posicionCanvas": {
+      "x": 80,
+      "y": 220
+    },
+    "instruccionAvance": null,
+    "instruccionRechazo": null,
+    "creadoEn": {
+      "$date": "2025-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "110000000000000000000020"
+    },
+    "versionPoliticaId": "cc2000000000000000000004",
+    "nodoId": "recepcion",
+    "calleId": "recepcion",
+    "tipoNodo": "ACTIVITY",
+    "etiqueta": "Recepción — Permiso de Ausencia",
+    "departamentoId": "dd1000000000000000000005",
+    "salidas": [
+      {
+        "nodoDestino": "revision",
+        "rama": true,
+        "etiqueta": ""
+      }
+    ],
+    "formulario": [
+      {
+        "nombre": "solicitante",
+        "etiqueta": "Nombre del empleado",
+        "tipo": "TEXT",
+        "requerido": true
+      },
+      {
+        "nombre": "descripcion",
+        "etiqueta": "Motivo del permiso",
+        "tipo": "TEXTAREA",
+        "requerido": true
+      },
+      {
+        "nombre": "fecha_requerida",
+        "etiqueta": "Fecha de inicio de ausencia",
+        "tipo": "DATE",
+        "requerido": true
+      },
+      {
+        "nombre": "doc_solicitud_firma",
+        "etiqueta": "Solicitud firmada por el empleado",
+        "tipo": "FILE",
+        "requerido": true
+      },
+      {
+        "nombre": "doc_certificado",
+        "etiqueta": "Certificado médico (si aplica)",
+        "tipo": "FILE",
+        "requerido": false
+      }
+    ],
+    "instruccionAvance": "Verificar documentación y registrar la solicitud. Adjuntar los archivos requeridos.",
+    "instruccionRechazo": "Rechazar si la documentación está incompleta, ilegible o fuera de plazo.",
+    "posicionCanvas": {
+      "x": 280,
+      "y": 220
+    },
+    "creadoEn": {
+      "$date": "2025-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "110000000000000000000021"
+    },
+    "versionPoliticaId": "cc2000000000000000000004",
+    "nodoId": "revision",
+    "calleId": null,
+    "tipoNodo": "DECISION",
+    "etiqueta": "Revisión",
+    "salidas": [
+      {
+        "nodoDestino": "procesamiento",
+        "rama": false,
+        "etiqueta": "Aprobado"
+      },
+      {
+        "nodoDestino": "devolucion",
+        "rama": true,
+        "etiqueta": "Devolver"
+      }
+    ],
+    "formulario": [],
+    "posicionCanvas": {
+      "x": 480,
+      "y": 220
+    },
+    "instruccionAvance": null,
+    "instruccionRechazo": null,
+    "creadoEn": {
+      "$date": "2025-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "110000000000000000000022"
+    },
+    "versionPoliticaId": "cc2000000000000000000004",
+    "nodoId": "procesamiento",
+    "calleId": "procesamiento",
+    "tipoNodo": "ACTIVITY",
+    "etiqueta": "Procesamiento — Permiso de Ausencia",
+    "departamentoId": "dd1000000000000000000003",
+    "salidas": [
+      {
+        "nodoDestino": "fin",
+        "rama": true,
+        "etiqueta": ""
+      }
+    ],
+    "formulario": [
+      {
+        "nombre": "resultado",
+        "etiqueta": "Resolución del permiso",
+        "tipo": "TEXT",
+        "requerido": true
+      },
+      {
+        "nombre": "doc_aprobacion",
+        "etiqueta": "Documento de aprobación (PDF)",
+        "tipo": "FILE",
+        "requerido": true
+      },
+      {
+        "nombre": "observaciones",
+        "etiqueta": "Observaciones",
+        "tipo": "TEXTAREA",
+        "requerido": false
+      }
+    ],
+    "instruccionAvance": "Procesar la solicitud aprobada. Adjuntar el documento de resolución.",
+    "instruccionRechazo": "Devolver si no es posible procesar.",
+    "posicionCanvas": {
+      "x": 680,
+      "y": 100
+    },
+    "creadoEn": {
+      "$date": "2025-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "110000000000000000000023"
+    },
+    "versionPoliticaId": "cc2000000000000000000004",
+    "nodoId": "devolucion",
+    "calleId": "devolucion",
+    "tipoNodo": "ACTIVITY",
+    "etiqueta": "Devolución — Permiso de Ausencia",
+    "departamentoId": "dd1000000000000000000003",
+    "salidas": [
+      {
+        "nodoDestino": "fin",
+        "rama": true,
+        "etiqueta": ""
+      }
+    ],
+    "formulario": [
+      {
+        "nombre": "motivo_devolucion",
+        "etiqueta": "Motivo de devolución",
+        "tipo": "TEXTAREA",
+        "requerido": true
+      }
+    ],
+    "instruccionAvance": "Documentar el motivo de devolución y notificar al solicitante.",
+    "instruccionRechazo": null,
+    "posicionCanvas": {
+      "x": 680,
+      "y": 340
+    },
+    "creadoEn": {
+      "$date": "2025-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "110000000000000000000024"
+    },
+    "versionPoliticaId": "cc2000000000000000000004",
+    "nodoId": "fin",
+    "calleId": null,
+    "tipoNodo": "END",
+    "etiqueta": "Fin",
+    "salidas": [],
+    "formulario": [],
+    "posicionCanvas": {
+      "x": 880,
+      "y": 220
+    },
+    "instruccionAvance": null,
+    "instruccionRechazo": null,
+    "creadoEn": {
+      "$date": "2025-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "110000000000000000000025"
+    },
+    "versionPoliticaId": "cc2000000000000000000005",
+    "nodoId": "inicio",
+    "calleId": null,
+    "tipoNodo": "START",
+    "etiqueta": "Inicio",
+    "salidas": [
+      {
+        "nodoDestino": "recepcion",
+        "rama": true,
+        "etiqueta": ""
+      }
+    ],
+    "formulario": [],
+    "posicionCanvas": {
+      "x": 80,
+      "y": 220
+    },
+    "instruccionAvance": null,
+    "instruccionRechazo": null,
+    "creadoEn": {
+      "$date": "2025-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "110000000000000000000026"
+    },
+    "versionPoliticaId": "cc2000000000000000000005",
+    "nodoId": "recepcion",
+    "calleId": "recepcion",
+    "tipoNodo": "ACTIVITY",
+    "etiqueta": "Recepción — Evaluación de Proveedor",
+    "departamentoId": "dd1000000000000000000005",
+    "salidas": [
+      {
+        "nodoDestino": "revision",
+        "rama": true,
+        "etiqueta": ""
+      }
+    ],
+    "formulario": [
+      {
+        "nombre": "solicitante",
+        "etiqueta": "Nombre del solicitante",
+        "tipo": "TEXT",
+        "requerido": true
+      },
+      {
+        "nombre": "descripcion",
+        "etiqueta": "Proveedor a evaluar",
+        "tipo": "TEXTAREA",
+        "requerido": true
+      },
+      {
+        "nombre": "fecha_requerida",
+        "etiqueta": "Fecha límite de evaluación",
+        "tipo": "DATE",
+        "requerido": false
+      },
+      {
+        "nombre": "doc_ruc_proveedor",
+        "etiqueta": "RUC / razón social del proveedor",
+        "tipo": "FILE",
+        "requerido": true
+      },
+      {
+        "nombre": "doc_propuesta",
+        "etiqueta": "Propuesta comercial del proveedor",
+        "tipo": "FILE",
+        "requerido": true
+      }
+    ],
+    "instruccionAvance": "Verificar documentación y registrar la solicitud. Adjuntar los archivos requeridos.",
+    "instruccionRechazo": "Rechazar si la documentación está incompleta, ilegible o fuera de plazo.",
+    "posicionCanvas": {
+      "x": 280,
+      "y": 220
+    },
+    "creadoEn": {
+      "$date": "2025-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "110000000000000000000027"
+    },
+    "versionPoliticaId": "cc2000000000000000000005",
+    "nodoId": "revision",
+    "calleId": null,
+    "tipoNodo": "DECISION",
+    "etiqueta": "Revisión",
+    "salidas": [
+      {
+        "nodoDestino": "procesamiento",
+        "rama": false,
+        "etiqueta": "Aprobado"
+      },
+      {
+        "nodoDestino": "devolucion",
+        "rama": true,
+        "etiqueta": "Devolver"
+      }
+    ],
+    "formulario": [],
+    "posicionCanvas": {
+      "x": 480,
+      "y": 220
+    },
+    "instruccionAvance": null,
+    "instruccionRechazo": null,
+    "creadoEn": {
+      "$date": "2025-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "110000000000000000000028"
+    },
+    "versionPoliticaId": "cc2000000000000000000005",
+    "nodoId": "procesamiento",
+    "calleId": "procesamiento",
+    "tipoNodo": "ACTIVITY",
+    "etiqueta": "Procesamiento — Evaluación de Proveedor",
+    "departamentoId": "dd1000000000000000000002",
+    "salidas": [
+      {
+        "nodoDestino": "fin",
+        "rama": true,
+        "etiqueta": ""
+      }
+    ],
+    "formulario": [
+      {
+        "nombre": "resultado",
+        "etiqueta": "Resultado de la evaluación",
+        "tipo": "TEXT",
+        "requerido": true
+      },
+      {
+        "nombre": "doc_informe_eval",
+        "etiqueta": "Informe de evaluación (PDF)",
+        "tipo": "FILE",
+        "requerido": true
+      },
+      {
+        "nombre": "observaciones",
+        "etiqueta": "Observaciones",
+        "tipo": "TEXTAREA",
+        "requerido": false
+      }
+    ],
+    "instruccionAvance": "Procesar la solicitud aprobada. Adjuntar el documento de resolución.",
+    "instruccionRechazo": "Devolver si no es posible procesar.",
+    "posicionCanvas": {
+      "x": 680,
+      "y": 100
+    },
+    "creadoEn": {
+      "$date": "2025-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "110000000000000000000029"
+    },
+    "versionPoliticaId": "cc2000000000000000000005",
+    "nodoId": "devolucion",
+    "calleId": "devolucion",
+    "tipoNodo": "ACTIVITY",
+    "etiqueta": "Devolución — Evaluación de Proveedor",
+    "departamentoId": "dd1000000000000000000002",
+    "salidas": [
+      {
+        "nodoDestino": "fin",
+        "rama": true,
+        "etiqueta": ""
+      }
+    ],
+    "formulario": [
+      {
+        "nombre": "motivo_devolucion",
+        "etiqueta": "Motivo de devolución",
+        "tipo": "TEXTAREA",
+        "requerido": true
+      }
+    ],
+    "instruccionAvance": "Documentar el motivo de devolución y notificar al solicitante.",
+    "instruccionRechazo": null,
+    "posicionCanvas": {
+      "x": 680,
+      "y": 340
+    },
+    "creadoEn": {
+      "$date": "2025-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "110000000000000000000030"
+    },
+    "versionPoliticaId": "cc2000000000000000000005",
+    "nodoId": "fin",
+    "calleId": null,
+    "tipoNodo": "END",
+    "etiqueta": "Fin",
+    "salidas": [],
+    "formulario": [],
+    "posicionCanvas": {
+      "x": 880,
+      "y": 220
+    },
+    "instruccionAvance": null,
+    "instruccionRechazo": null,
+    "creadoEn": {
+      "$date": "2025-01-01T00:00:00.000Z"
+    }
+  }
+]
